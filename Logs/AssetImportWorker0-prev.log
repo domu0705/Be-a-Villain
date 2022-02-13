@@ -1,0 +1,1722 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.27f1 (e759542391ea) revision 15161684'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'ko' Physical Memory: 16221 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.27f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/User/Documents/DevStudy/Unity Projects/Sleeping Warrior
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64411
+Successfully changed project path to: C:/Users/User/Documents/DevStudy/Unity Projects/Sleeping Warrior
+C:/Users/User/Documents/DevStudy/Unity Projects/Sleeping Warrior
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 35.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.27f1 (e759542391ea)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.27f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/User/Documents/DevStudy/Unity Projects/Sleeping Warrior/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2487)
+    Vendor:   
+    VRAM:     12137 MB
+    Driver:   30.0.15.1123
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.27f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.27f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.27f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56832
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.27f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001694 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 35.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.506 seconds
+Domain Reload Profiling:
+	ReloadAssembly (507ms)
+		BeginReloadAssembly (34ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (411ms)
+			LoadAssemblies (33ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (128ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (159ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (36ms)
+				BeforeProcessingInitializeOnLoad (16ms)
+				ProcessInitializeOnLoadAttributes (75ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003622 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.951 seconds
+Domain Reload Profiling:
+	ReloadAssembly (952ms)
+		BeginReloadAssembly (125ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (772ms)
+			LoadAssemblies (79ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (263ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (299ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (200ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.25 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1544 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71.9 MB.
+System memory in use after: 71.7 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 1976.
+Total: 1.923300 ms (FindLiveObjects: 0.077500 ms CreateObjectMapping: 0.022000 ms MarkObjects: 1.668800 ms  DeleteObjects: 0.154300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Assets/furniture/Prefabs/BedRoom/Pilled.prefab
+  artifactKey: Guid(2d0113c80f53cad4d930cf66cc308d1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/BedRoom/Pilled.prefab using Guid(2d0113c80f53cad4d930cf66cc308d1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '448299791bc5e419c48f84343193a1a8') in 0.054545 seconds 
+  Import took 0.056409 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Assets/furniture/Prefabs/BedRoom/Drawer.prefab
+  artifactKey: Guid(7f18227a94106cd4885511dc014b3d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/BedRoom/Drawer.prefab using Guid(7f18227a94106cd4885511dc014b3d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86e2a8555add5dacba7f83b4ff2a70dc') in 0.012644 seconds 
+  Import took 0.014515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/Assets/furniture/Prefabs/BedRoom/Bed.prefab
+  artifactKey: Guid(dd3313ee9ee86d24193cf54a44a430f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/BedRoom/Bed.prefab using Guid(dd3313ee9ee86d24193cf54a44a430f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21f908712df4a9ce6c81dbabecb63545') in 0.008418 seconds 
+  Import took 0.010208 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Assets/furniture/Prefabs/BedRoom/TableLamp.prefab
+  artifactKey: Guid(d99127f63ce55ac4a914d0109c66460e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/BedRoom/TableLamp.prefab using Guid(d99127f63ce55ac4a914d0109c66460e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a24ff16b2635dd6fc16cda7c6cabde6d') in 0.159096 seconds 
+  Import took 0.160925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.380941 seconds.
+  path: Assets/Assets/furniture/Prefabs/DinnerRoom/Chair2.prefab
+  artifactKey: Guid(5523dc4c843d0654da42ff7a8ebd0286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/DinnerRoom/Chair2.prefab using Guid(5523dc4c843d0654da42ff7a8ebd0286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a183660e8846397ef74397f0ce8f3a9') in 0.013192 seconds 
+  Import took 0.015966 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Assets/furniture/Prefabs/DinnerRoom/Cup.prefab
+  artifactKey: Guid(8c0e595ffd71efe4d9a1a4a0e08f2047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/DinnerRoom/Cup.prefab using Guid(8c0e595ffd71efe4d9a1a4a0e08f2047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c2cab9534381f6b3d42a20b7bbc0707') in 0.117952 seconds 
+  Import took 0.119861 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/Assets/furniture/Prefabs/DinnerRoom/Table1.prefab
+  artifactKey: Guid(445d2f1be2f6f8f489910c46367a37f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/DinnerRoom/Table1.prefab using Guid(445d2f1be2f6f8f489910c46367a37f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca2e12715292771525280e336300e06') in 0.015462 seconds 
+  Import took 0.017152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Assets/furniture/Prefabs/DinnerRoom/TableComplete.prefab
+  artifactKey: Guid(ae542f9f1099f6940bb7c70d88c2a158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/DinnerRoom/TableComplete.prefab using Guid(ae542f9f1099f6940bb7c70d88c2a158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cde28379cd74603fae015e36368444b1') in 0.009645 seconds 
+  Import took 0.011569 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Assets/furniture/Prefabs/DinnerRoom/SteelShape.prefab
+  artifactKey: Guid(47d534c0e19826b468695514ee8955b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/DinnerRoom/SteelShape.prefab using Guid(47d534c0e19826b468695514ee8955b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00ad274b4a6a5f199d358dc0b67b8bd7') in 0.008927 seconds 
+  Import took 0.010814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.623355 seconds.
+  path: Assets/Assets/furniture/Prefabs/Decoration/Curtain.prefab
+  artifactKey: Guid(7b6a6dd10c95e82468a8a0d28b9dc433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/Decoration/Curtain.prefab using Guid(7b6a6dd10c95e82468a8a0d28b9dc433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63c440d8d0bbb01b4ec765fcb4c91f6b') in 0.011784 seconds 
+  Import took 0.014491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Assets/furniture/Prefabs/Decoration/Frame3.prefab
+  artifactKey: Guid(2b00a210036f30049bab5eb8cad9fd4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/Decoration/Frame3.prefab using Guid(2b00a210036f30049bab5eb8cad9fd4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c3f72fe0e9b895856a3a40590504383') in 0.008935 seconds 
+  Import took 0.011287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/Assets/furniture/Prefabs/Decoration/Frame1.prefab
+  artifactKey: Guid(062bfc87662647d43951377bb4b671f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/Decoration/Frame1.prefab using Guid(062bfc87662647d43951377bb4b671f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eb7e6200422ef2d77c5f84b2627157b') in 0.012509 seconds 
+  Import took 0.014969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Assets/furniture/Prefabs/Decoration/Plant2.prefab
+  artifactKey: Guid(2e2ab467fad9033438c76e2c50d6661c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/Decoration/Plant2.prefab using Guid(2e2ab467fad9033438c76e2c50d6661c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3e1ec028a5744c3d2b4c1d65c0c1106') in 0.011970 seconds 
+  Import took 0.014157 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/Assets/furniture/Prefabs/Decoration/Lamp2.prefab
+  artifactKey: Guid(2b1ab68e56742254994b99a6e7cacadb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/furniture/Prefabs/Decoration/Lamp2.prefab using Guid(2b1ab68e56742254994b99a6e7cacadb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '527932bc34f6e0348f81833f3e555378') in 0.016278 seconds 
+  Import took 0.018482 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004369 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.874 seconds
+Domain Reload Profiling:
+	ReloadAssembly (874ms)
+		BeginReloadAssembly (85ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (731ms)
+			LoadAssemblies (71ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (243ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (287ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (98ms)
+				ProcessInitializeOnLoadAttributes (170ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1535 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.6 MB.
+System memory in use after: 74.4 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1986.
+Total: 2.594200 ms (FindLiveObjects: 0.187000 ms CreateObjectMapping: 0.037700 ms MarkObjects: 2.158700 ms  DeleteObjects: 0.209800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003647 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.861 seconds
+Domain Reload Profiling:
+	ReloadAssembly (861ms)
+		BeginReloadAssembly (84ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (719ms)
+			LoadAssemblies (71ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (238ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (283ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (188ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1535 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.6 MB.
+System memory in use after: 74.4 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1988.
+Total: 2.795000 ms (FindLiveObjects: 0.195100 ms CreateObjectMapping: 0.045900 ms MarkObjects: 2.312200 ms  DeleteObjects: 0.240500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003455 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.883 seconds
+Domain Reload Profiling:
+	ReloadAssembly (884ms)
+		BeginReloadAssembly (105ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (720ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (251ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (268ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (177ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1535 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.6 MB.
+System memory in use after: 74.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1990.
+Total: 2.896000 ms (FindLiveObjects: 0.198400 ms CreateObjectMapping: 0.044500 ms MarkObjects: 2.368800 ms  DeleteObjects: 0.282900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 110.778308 seconds.
+  path: Assets/Assets/Bedroom/Animations/Chest of Drawers
+  artifactKey: Guid(9b4a85d32de3bd6439c15fdffc67b090) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Animations/Chest of Drawers using Guid(9b4a85d32de3bd6439c15fdffc67b090) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ec777012fe18df00a0480e915e6ceff') in 0.008258 seconds 
+  Import took 0.010582 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.969021 seconds.
+  path: Assets/Assets/Bedroom/Materials/bed blue.mat
+  artifactKey: Guid(127a46240555223428b17817a90d5187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/bed blue.mat using Guid(127a46240555223428b17817a90d5187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '760351ad4eeaffedf57d613b893f64d7') in 0.062002 seconds 
+  Import took 0.064462 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Assets/Bedroom/Materials/double bed red.mat
+  artifactKey: Guid(3fc372a509b64d14db3fe46bb5bcdc68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/double bed red.mat using Guid(3fc372a509b64d14db3fe46bb5bcdc68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c3530bc7d621bae9ed0b30880b4f27e') in 0.018457 seconds 
+  Import took 0.020635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Assets/Bedroom/Materials/large drawer.mat
+  artifactKey: Guid(3aa75a2e354407d41844e98d6566e57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/large drawer.mat using Guid(3aa75a2e354407d41844e98d6566e57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41b7334779a08b10ce402d5bff568d4c') in 0.015918 seconds 
+  Import took 0.018437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/Assets/Bedroom/Materials/double bed orange.mat
+  artifactKey: Guid(e694824e2afccf649931770178145a3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/double bed orange.mat using Guid(e694824e2afccf649931770178145a3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a836f33c7a0a52cebecc40c0bdea34e8') in 0.011313 seconds 
+  Import took 0.013545 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Assets/Bedroom/Materials/bed magenta.mat
+  artifactKey: Guid(56f6e8252716abe48af38527eec998df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/bed magenta.mat using Guid(56f6e8252716abe48af38527eec998df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fb4049cf9f1eb692e068db28f6ce147') in 0.011130 seconds 
+  Import took 0.013303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/Assets/Bedroom/Materials/frame.mat
+  artifactKey: Guid(2f95d5c8b674fa4409ad06eb3b85645d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/frame.mat using Guid(2f95d5c8b674fa4409ad06eb3b85645d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08b759b0dbcead732442b37db471c970') in 0.022524 seconds 
+  Import took 0.024642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Assets/Bedroom/Materials/bed yellow.mat
+  artifactKey: Guid(c0a2476f091bbea458d63eae51103ed8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/bed yellow.mat using Guid(c0a2476f091bbea458d63eae51103ed8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb19afdcbc34b3fe8d7918ad6a52d444') in 0.010818 seconds 
+  Import took 0.013000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/Assets/Bedroom/Materials/rug blue.mat
+  artifactKey: Guid(a9b01ecb2008731418a16c48b33902cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/rug blue.mat using Guid(a9b01ecb2008731418a16c48b33902cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51fb2aca071a001665899ead1a5ba419') in 0.011322 seconds 
+  Import took 0.013471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/Assets/Bedroom/Materials/night stand.mat
+  artifactKey: Guid(ce6d5bdcb83d13e4abd109246bdf4072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/night stand.mat using Guid(ce6d5bdcb83d13e4abd109246bdf4072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '503261110d8d3df06e6f1661a3d8305b') in 0.010743 seconds 
+  Import took 0.012918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Bedroom/Materials/double bed light blue.mat
+  artifactKey: Guid(53fc7097e3fd8d2429bd5af81bbcfecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/double bed light blue.mat using Guid(53fc7097e3fd8d2429bd5af81bbcfecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c624ada3c283e48188be66770232fb81') in 0.011524 seconds 
+  Import took 0.013705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/Assets/Bedroom/Materials/double bed magenta.mat
+  artifactKey: Guid(b9ca5178b0666cb4e94e0d1121640aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/double bed magenta.mat using Guid(b9ca5178b0666cb4e94e0d1121640aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '638a7991a3bdbb15ebc9d6ff4a233b1a') in 0.010765 seconds 
+  Import took 0.012849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/Assets/Bedroom/Materials/double bed blue.mat
+  artifactKey: Guid(91bb536318e3622479694cb22f5b4fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/double bed blue.mat using Guid(91bb536318e3622479694cb22f5b4fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22c675a0b89270af24f95cc57c948fbf') in 0.011107 seconds 
+  Import took 0.013230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Assets/Bedroom/Materials/double bed cyan.mat
+  artifactKey: Guid(952c361a7c5ee2246983d2c0fc0122c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/double bed cyan.mat using Guid(952c361a7c5ee2246983d2c0fc0122c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5704348b86ff27fd26945b52e8599b37') in 0.010842 seconds 
+  Import took 0.012983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/Assets/Bedroom/Materials/bed green.mat
+  artifactKey: Guid(036db7a0d5ce0fe409f62dc68a80b233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/bed green.mat using Guid(036db7a0d5ce0fe409f62dc68a80b233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc7d4aea6599abba8f1a72439183fc8a') in 0.010922 seconds 
+  Import took 0.013097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/Assets/Bedroom/Materials/lamp blue.mat
+  artifactKey: Guid(082a5f967181ed74ba95a431a6ab5342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/lamp blue.mat using Guid(082a5f967181ed74ba95a431a6ab5342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c4ce1a3fa45fac3d7f493b617afc330') in 0.011208 seconds 
+  Import took 0.013310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Assets/Bedroom/Materials/chest of drawers.mat
+  artifactKey: Guid(f41cb78bdf200874fa198fdcab95b527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/chest of drawers.mat using Guid(f41cb78bdf200874fa198fdcab95b527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d8fa6c4ff9ab7b85f4c9ea49af2abae') in 0.010712 seconds 
+  Import took 0.012952 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Assets/Bedroom/Materials/bed red.mat
+  artifactKey: Guid(abdc95f9b9b18e74eb027faab53ed58c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/bed red.mat using Guid(abdc95f9b9b18e74eb027faab53ed58c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57b63d947f5323917c428fe8c29aa4b7') in 0.010366 seconds 
+  Import took 0.012552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Assets/Bedroom/Materials/rug green.mat
+  artifactKey: Guid(26426d295dbff8144989f03308b816e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/rug green.mat using Guid(26426d295dbff8144989f03308b816e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '392a49c56839fc451a3741ea92e9e4aa') in 0.010995 seconds 
+  Import took 0.013151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Assets/Bedroom/Materials/lamp red.mat
+  artifactKey: Guid(7b13d04251d053941b8918442d2646d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/lamp red.mat using Guid(7b13d04251d053941b8918442d2646d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5eb28ca64b3783c42ee6d292b2c738e3') in 0.010783 seconds 
+  Import took 0.012919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Assets/Bedroom/Materials/wardrobe.mat
+  artifactKey: Guid(9c5ed725cd8c78c4fbdb858e57617f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/wardrobe.mat using Guid(9c5ed725cd8c78c4fbdb858e57617f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68b2b096f3074aa82af2880fa34ece2b') in 0.010168 seconds 
+  Import took 0.012494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Bedroom/Materials/bed cyan.mat
+  artifactKey: Guid(f4a899efc97474e439d88746d8203d13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/bed cyan.mat using Guid(f4a899efc97474e439d88746d8203d13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31581331ee12c3d963ff3dbf7a4f3412') in 0.010885 seconds 
+  Import took 0.013134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Assets/Bedroom/Materials/double bed green.mat
+  artifactKey: Guid(09a077450fdd138418b8f096fcb2a1cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/double bed green.mat using Guid(09a077450fdd138418b8f096fcb2a1cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6318c9c6a8f5216bde8936356dfcf9df') in 0.011198 seconds 
+  Import took 0.013701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/Assets/Bedroom/Materials/double bed yellow.mat
+  artifactKey: Guid(f9b4482f81e82c142834f215b9eb17c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/double bed yellow.mat using Guid(f9b4482f81e82c142834f215b9eb17c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef9843fef5a7e0aae90914326738a0ea') in 0.011096 seconds 
+  Import took 0.013204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Assets/Bedroom/Materials/bed purple.mat
+  artifactKey: Guid(55f180d581fc0e6429310750bee579ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/bed purple.mat using Guid(55f180d581fc0e6429310750bee579ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6c415618a52a6e547606a75c82752fb') in 0.011310 seconds 
+  Import took 0.013535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Assets/Bedroom/Materials/rug red.mat
+  artifactKey: Guid(97595c1b292e0a449a5741edae7e04eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/rug red.mat using Guid(97595c1b292e0a449a5741edae7e04eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce201fc3ded6a8a6c704cd5dc773379f') in 0.011390 seconds 
+  Import took 0.013507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/Assets/Bedroom/Materials/bed orange.mat
+  artifactKey: Guid(2a20e691d10ea984292976a6812d7043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/bed orange.mat using Guid(2a20e691d10ea984292976a6812d7043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8877ab7ad39dbb7b515a6f6424f1135c') in 0.011286 seconds 
+  Import took 0.013479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/Assets/Bedroom/Materials/bed light blue.mat
+  artifactKey: Guid(2bf1dee3e5d859d4592bfcef658f7d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/bed light blue.mat using Guid(2bf1dee3e5d859d4592bfcef658f7d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e60b0ee4fe587e7688046a2cf3216427') in 0.011147 seconds 
+  Import took 0.013323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/Assets/Bedroom/Materials/double bed purple.mat
+  artifactKey: Guid(5757408ebe99fe241b0e490466e7c377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/double bed purple.mat using Guid(5757408ebe99fe241b0e490466e7c377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0be5d42673d41187f66d5c41a7d8de98') in 0.010875 seconds 
+  Import took 0.012969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Assets/Bedroom/Materials/drawer.mat
+  artifactKey: Guid(b4ada9c884f1dd1449af0999298ffa33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/drawer.mat using Guid(b4ada9c884f1dd1449af0999298ffa33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45785945e97deddd1521809262158574') in 0.011783 seconds 
+  Import took 0.013890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/Assets/Bedroom/Materials/rug black.mat
+  artifactKey: Guid(491db98051062554cbcef2cc08f504f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/rug black.mat using Guid(491db98051062554cbcef2cc08f504f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac0521a615bb450e4c6738837788ed91') in 0.010821 seconds 
+  Import took 0.012959 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Bedroom/Materials/wardrobe door.mat
+  artifactKey: Guid(c640f52dde586e648bb4088fc7712b5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Materials/wardrobe door.mat using Guid(c640f52dde586e648bb4088fc7712b5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d95d2e3c169063b09667bae609624a4') in 0.010549 seconds 
+  Import took 0.012862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.864698 seconds.
+  path: Assets/Assets/Bedroom/Models/bed blue.obj
+  artifactKey: Guid(8d80a45af31216644a99bc0e6777214b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/bed blue.obj using Guid(8d80a45af31216644a99bc0e6777214b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fc365fe85ea1282cccc0e1a5ace7eee') in 0.061125 seconds 
+  Import took 0.063410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/Assets/Bedroom/Models/bed red.obj
+  artifactKey: Guid(99e727c6a22408d4d8030c795c45f51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/bed red.obj using Guid(99e727c6a22408d4d8030c795c45f51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c665eca9fe8eb48d0f0b8990113bdc57') in 0.019832 seconds 
+  Import took 0.021939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Assets/Bedroom/Models/double bed red.obj
+  artifactKey: Guid(01e6e6a7b59085b42908e85fdb432f22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/double bed red.obj using Guid(01e6e6a7b59085b42908e85fdb432f22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63bf2dc0d3802c44698078930ee2af74') in 0.019251 seconds 
+  Import took 0.021330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Assets/Bedroom/Models/double bed green.obj
+  artifactKey: Guid(41399b2dd372f2d4a88816ad6d0d0e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/double bed green.obj using Guid(41399b2dd372f2d4a88816ad6d0d0e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3772b81fe8c359f21805ade3f1bbf526') in 0.018043 seconds 
+  Import took 0.020113 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Assets/Bedroom/Models/lamp red.obj
+  artifactKey: Guid(83dd184f5d161024286ffecd7971fc5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/lamp red.obj using Guid(83dd184f5d161024286ffecd7971fc5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d87b0831907e09931db36be6d839bbc') in 0.018677 seconds 
+  Import took 0.020974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Assets/Bedroom/Models/double bed cyan.obj
+  artifactKey: Guid(0311dad0bdf4a074a838c409d4246dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/double bed cyan.obj using Guid(0311dad0bdf4a074a838c409d4246dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1093b0bddd25d741894f244bfb264e45') in 0.018544 seconds 
+  Import took 0.020709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Assets/Bedroom/Models/rug black.obj
+  artifactKey: Guid(8ecb693f837f4cf409944ddcd74b2d7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/rug black.obj using Guid(8ecb693f837f4cf409944ddcd74b2d7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeecc9c7f98f6f1f515ce1221d713ecc') in 0.018506 seconds 
+  Import took 0.020569 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Assets/Bedroom/Models/bed yellow.obj
+  artifactKey: Guid(7005d9bdf2c086a408116136bbc4b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/bed yellow.obj using Guid(7005d9bdf2c086a408116136bbc4b6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3e3dcf73ea96d8ddf547465af64261c') in 0.019051 seconds 
+  Import took 0.021144 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/Assets/Bedroom/Models/chest of drawers.obj
+  artifactKey: Guid(5cf66571c268ee44a812a4b818651ab3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/chest of drawers.obj using Guid(5cf66571c268ee44a812a4b818651ab3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '927b735dcfdb8278aa7f746b6a70a7c6') in 0.029260 seconds 
+  Import took 0.031350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/Assets/Bedroom/Models/double bed orange.obj
+  artifactKey: Guid(8497c434f0b54a5488027947af15127c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/double bed orange.obj using Guid(8497c434f0b54a5488027947af15127c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7c802a2d4d4d2fd45c99e417ed56dae') in 0.018488 seconds 
+  Import took 0.020590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Assets/Bedroom/Models/double bed magenta.obj
+  artifactKey: Guid(13336107d74e163479697ef1bacd323c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/double bed magenta.obj using Guid(13336107d74e163479697ef1bacd323c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '082d174eae4f8f4400b663f6ca900844') in 0.018258 seconds 
+  Import took 0.020341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Assets/Bedroom/Models/frame.obj
+  artifactKey: Guid(f43fa2d64e369be428036131f291f128) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/frame.obj using Guid(f43fa2d64e369be428036131f291f128) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41123a166a53eb1da08667cd91ac0613') in 0.019772 seconds 
+  Import took 0.021898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Assets/Bedroom/Models/double bed yellow.obj
+  artifactKey: Guid(179a6228e2b277f4fb23a250e2636db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/double bed yellow.obj using Guid(179a6228e2b277f4fb23a250e2636db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e6eb22761ca0c91c33bce1791d19a1f') in 0.018654 seconds 
+  Import took 0.020752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Assets/Bedroom/Models/bed cyan.obj
+  artifactKey: Guid(b19e4af82b234bc44ba13fd3506e1253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/bed cyan.obj using Guid(b19e4af82b234bc44ba13fd3506e1253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fcd9a24f47fa4d951449996921d3d50') in 0.017961 seconds 
+  Import took 0.020040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Assets/Bedroom/Models/double bed light blue.obj
+  artifactKey: Guid(dc2c14b8a4751bd46ace36d4b3a312fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/double bed light blue.obj using Guid(dc2c14b8a4751bd46ace36d4b3a312fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e7a6c598327c1cc7b88286c82c69d43') in 0.018005 seconds 
+  Import took 0.020053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/Assets/Bedroom/Models/drawer.obj
+  artifactKey: Guid(4da5638a33ea11e418ad2746d1635833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/drawer.obj using Guid(4da5638a33ea11e418ad2746d1635833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a36e31a28130edf461c4b84ef0d637a') in 0.019122 seconds 
+  Import took 0.021178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/Assets/Bedroom/Models/night stand.obj
+  artifactKey: Guid(1dd9ce5a64fd779479e542c0cb1dd5c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/night stand.obj using Guid(1dd9ce5a64fd779479e542c0cb1dd5c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '120638e78825021b3192acb6c06a048c') in 0.018714 seconds 
+  Import took 0.020782 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Assets/Bedroom/Models/double bed purple.obj
+  artifactKey: Guid(f98e923f7f429f7449b881150a038742) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/double bed purple.obj using Guid(f98e923f7f429f7449b881150a038742) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60dfbe8b6cfe045802b67a64f1b0465f') in 0.017909 seconds 
+  Import took 0.019947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/Assets/Bedroom/Models/bed magenta.obj
+  artifactKey: Guid(13a0bbe8fcef5ce42afafb6ee52346ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/bed magenta.obj using Guid(13a0bbe8fcef5ce42afafb6ee52346ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1642e9c37553fbc04a5ece6d0eccda1e') in 0.018337 seconds 
+  Import took 0.020397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/Assets/Bedroom/Models/bed purple.obj
+  artifactKey: Guid(fe7de283771cfa04bb3f6dd20344414d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/bed purple.obj using Guid(fe7de283771cfa04bb3f6dd20344414d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dd2ab0cf7db1b74b5ee47f63188533c') in 0.017944 seconds 
+  Import took 0.019990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Assets/Bedroom/Models/bed orange.obj
+  artifactKey: Guid(4068c126c8910a542a719ba9fa7dc8e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/bed orange.obj using Guid(4068c126c8910a542a719ba9fa7dc8e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4386dadc153bd94b7ec9a0d7cc82d26') in 0.017563 seconds 
+  Import took 0.019623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Assets/Bedroom/Models/double bed blue.obj
+  artifactKey: Guid(3948a94e5b33e7f449cdb822ce2bc04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/double bed blue.obj using Guid(3948a94e5b33e7f449cdb822ce2bc04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d8f57ea3b97fc78653ab66c236c4a9e') in 0.017550 seconds 
+  Import took 0.019672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Assets/Bedroom/Models/rug green.obj
+  artifactKey: Guid(3ac10b805fe917c4da1e295cf89b4c94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/rug green.obj using Guid(3ac10b805fe917c4da1e295cf89b4c94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eff2701c66acf81e9944a0f1e2d82c4d') in 0.018538 seconds 
+  Import took 0.020682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Assets/Bedroom/Models/lamp blue.obj
+  artifactKey: Guid(d2d1ed7234c621f449acd32144b501ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/lamp blue.obj using Guid(d2d1ed7234c621f449acd32144b501ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c69328267edfb35a2b89ac23225fc27') in 0.019406 seconds 
+  Import took 0.021501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Assets/Bedroom/Models/large drawer.obj
+  artifactKey: Guid(cdcec728dd3af2d4f9b0c24f56a2c0bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/large drawer.obj using Guid(cdcec728dd3af2d4f9b0c24f56a2c0bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b628dbd7460312c672fb4ce99eb64b0') in 0.018215 seconds 
+  Import took 0.020282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/Assets/Bedroom/Models/rug blue.obj
+  artifactKey: Guid(146704768d2ccb5419dbceee659b5dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/rug blue.obj using Guid(146704768d2ccb5419dbceee659b5dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a971962c80b9d69f85c0b01103434e5') in 0.018194 seconds 
+  Import took 0.020278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Assets/Bedroom/Models/bed light blue.obj
+  artifactKey: Guid(9f033b661547bb84ea1138f8e50fe270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/bed light blue.obj using Guid(9f033b661547bb84ea1138f8e50fe270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e9b1db3f43de2374bb54f48d09c915a') in 0.018392 seconds 
+  Import took 0.020486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Assets/Bedroom/Models/bed green.obj
+  artifactKey: Guid(abb589edc9805b04fbce6e14d52aa670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Models/bed green.obj using Guid(abb589edc9805b04fbce6e14d52aa670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b45c5e6b1b76b106890e4490c6e72e44') in 0.017469 seconds 
+  Import took 0.019539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.511984 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_blue.prefab
+  artifactKey: Guid(b21e89a06afcfe34e9558e74d73557b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_blue.prefab using Guid(b21e89a06afcfe34e9558e74d73557b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd11a969eadd79b11c48511459db38d98') in 0.012866 seconds 
+  Import took 0.015524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_blue.prefab
+  artifactKey: Guid(cb0e053fd89fe024dbd8be9cdb52019a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_blue.prefab using Guid(cb0e053fd89fe024dbd8be9cdb52019a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81e54d758c4ba31daf51f44de5324475') in 0.015134 seconds 
+  Import took 0.017326 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_magenta.prefab
+  artifactKey: Guid(cc75fe4428c283744b896a8a9ce76127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_magenta.prefab using Guid(cc75fe4428c283744b896a8a9ce76127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26f040e9a2f39c02a8880e82d82569bf') in 0.011340 seconds 
+  Import took 0.013549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_purple.prefab
+  artifactKey: Guid(886227689b8d46f4ba2e748e83a1d3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_purple.prefab using Guid(886227689b8d46f4ba2e748e83a1d3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37312ff9226af618dabac8d2a673f958') in 0.011977 seconds 
+  Import took 0.014257 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_purple.prefab
+  artifactKey: Guid(e216a1777ca862a4c9853a4acf09eff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_purple.prefab using Guid(e216a1777ca862a4c9853a4acf09eff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12652e078461cd9ea887113b9640a618') in 0.010998 seconds 
+  Import took 0.013535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_red.prefab
+  artifactKey: Guid(2585d4f98266e58409294addab67f5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_red.prefab using Guid(2585d4f98266e58409294addab67f5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '748a968304a3b1bfb10a81ac817b1511') in 0.011050 seconds 
+  Import took 0.013631 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/lamp_red.prefab
+  artifactKey: Guid(4f4a7d3daf53c5d418be6dc7db90f106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/lamp_red.prefab using Guid(4f4a7d3daf53c5d418be6dc7db90f106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e392cd3c1bcc38fa41337ebd182504ce') in 0.010589 seconds 
+  Import took 0.012723 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/chest_of_drawers.prefab
+  artifactKey: Guid(39b055d6ab9fe6e4f845eb407f011779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/chest_of_drawers.prefab using Guid(39b055d6ab9fe6e4f845eb407f011779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32b1835450e1641889b4b97615b189f9') in 0.015540 seconds 
+  Import took 0.017849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/lamp_blue.prefab
+  artifactKey: Guid(1b08dd842612cf344911cfb953678994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/lamp_blue.prefab using Guid(1b08dd842612cf344911cfb953678994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c52a907f61cfaaf737c56a16bb315521') in 0.010434 seconds 
+  Import took 0.012657 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_green.prefab
+  artifactKey: Guid(8cb11f6b8ecd33a43af0fb7af8be13dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_green.prefab using Guid(8cb11f6b8ecd33a43af0fb7af8be13dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fe14a7dec4ab7a8435944f4413fe11a') in 0.022446 seconds 
+  Import took 0.024585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_yellow.prefab
+  artifactKey: Guid(c5cfadf2d56a2fd4b8bb04b0a92ef380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_yellow.prefab using Guid(c5cfadf2d56a2fd4b8bb04b0a92ef380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '193437add05d11ee984fc0cf9a8f486e') in 0.011135 seconds 
+  Import took 0.013430 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/wardrobe.prefab
+  artifactKey: Guid(e7bde172665374241b224b6565a94d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/wardrobe.prefab using Guid(e7bde172665374241b224b6565a94d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36af314381c0b02c1aa4aae943858ada') in 0.012847 seconds 
+  Import took 0.015194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_magenta.prefab
+  artifactKey: Guid(76565f7b4abdce140a1afca00d26f061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_magenta.prefab using Guid(76565f7b4abdce140a1afca00d26f061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6ec9f6fca0e31701b3103f045ebd8c3') in 0.010585 seconds 
+  Import took 0.012860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/frame.prefab
+  artifactKey: Guid(248238f282b139d4b9a7e8d2be2f6584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/frame.prefab using Guid(248238f282b139d4b9a7e8d2be2f6584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbb05ad41827bdf9d04c7d0f941307e1') in 0.010178 seconds 
+  Import took 0.012466 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_red.prefab
+  artifactKey: Guid(24c7434dd4e21084dbc96d7b3d8ec005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_red.prefab using Guid(24c7434dd4e21084dbc96d7b3d8ec005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85192de2b159c57fb0a187b0e7d66fd0') in 0.010846 seconds 
+  Import took 0.013070 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_yellow.prefab
+  artifactKey: Guid(9d95d6b3c404dec45a53268d2a4fdc91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_yellow.prefab using Guid(9d95d6b3c404dec45a53268d2a4fdc91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '109f32c336043eaf15429342d1e37cb2') in 0.010484 seconds 
+  Import took 0.012630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_light_blue.prefab
+  artifactKey: Guid(03df76a469675614cbf1784f15256f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_light_blue.prefab using Guid(03df76a469675614cbf1784f15256f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab765be5d93cdda63fcb122d913d8a2b') in 0.010529 seconds 
+  Import took 0.012686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/rug_black.prefab
+  artifactKey: Guid(5c40df0b0d1910d4abff6e2dcc9a54aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/rug_black.prefab using Guid(5c40df0b0d1910d4abff6e2dcc9a54aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b274f9ef64224bbefe52e9850ac42424') in 0.010306 seconds 
+  Import took 0.012472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_cyan.prefab
+  artifactKey: Guid(f499765c45f62c2479abb1d00d5b0974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_cyan.prefab using Guid(f499765c45f62c2479abb1d00d5b0974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26452b6b3778783677d26f575a51165e') in 0.010420 seconds 
+  Import took 0.012635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/rug_green.prefab
+  artifactKey: Guid(6e67ee69b3fbc4145ae1b5cf7cd08d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/rug_green.prefab using Guid(6e67ee69b3fbc4145ae1b5cf7cd08d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff1f8e230a444714fec02564256cbcdb') in 0.010413 seconds 
+  Import took 0.012612 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_orange.prefab
+  artifactKey: Guid(efd5aec90baf90d4983460b29c30e782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_orange.prefab using Guid(efd5aec90baf90d4983460b29c30e782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9033affe8e9966ffae2009840cede6b5') in 0.010848 seconds 
+  Import took 0.013395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/rug_blue.prefab
+  artifactKey: Guid(09582b1b90441d8489763b8ab0159faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/rug_blue.prefab using Guid(09582b1b90441d8489763b8ab0159faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6580ad2cd3fea22149c089f81b81e31f') in 0.010365 seconds 
+  Import took 0.012500 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_cyan.prefab
+  artifactKey: Guid(f6e73dd8a00360a4c835f2a83061cc9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_cyan.prefab using Guid(f6e73dd8a00360a4c835f2a83061cc9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8632aa44da346431d0059d5b678b67ee') in 0.010798 seconds 
+  Import took 0.012982 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/rug_red.prefab
+  artifactKey: Guid(47f266a022aeece478d5eea14e967e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/rug_red.prefab using Guid(47f266a022aeece478d5eea14e967e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cea70d8054b793cb715e78f9524ceb35') in 0.010946 seconds 
+  Import took 0.013218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_orange.prefab
+  artifactKey: Guid(0c7ce550e9584194baa168d93d8f4cb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_orange.prefab using Guid(0c7ce550e9584194baa168d93d8f4cb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd46a8cecf0a8a57eb135d1d33c2c7e9') in 0.010945 seconds 
+  Import took 0.013160 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/night_stand.prefab
+  artifactKey: Guid(61285939438490c4b9b0262c84585dea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/night_stand.prefab using Guid(61285939438490c4b9b0262c84585dea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61334a99b95621dd1ce22051d1fdce26') in 0.013607 seconds 
+  Import took 0.016001 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_green.prefab
+  artifactKey: Guid(0cf481468ad48294a8aa5c65f9400fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_green.prefab using Guid(0cf481468ad48294a8aa5c65f9400fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44c60943eaaade2c9755131e0d083bcc') in 0.010598 seconds 
+  Import took 0.012840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_light_blue.prefab
+  artifactKey: Guid(20b8a9773e5f5cc42bf6cfd7704f7a39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_light_blue.prefab using Guid(20b8a9773e5f5cc42bf6cfd7704f7a39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f313f8c1251a0f516285711c71f0c08') in 0.010410 seconds 
+  Import took 0.012639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 177.905081 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_light_blue.prefab
+  artifactKey: Guid(03df76a469675614cbf1784f15256f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_light_blue.prefab using Guid(03df76a469675614cbf1784f15256f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06d047a7fad9069406ea8c913693045b') in 0.011520 seconds 
+  Import took 0.014212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_blue.prefab
+  artifactKey: Guid(cb0e053fd89fe024dbd8be9cdb52019a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_blue.prefab using Guid(cb0e053fd89fe024dbd8be9cdb52019a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37dee6a23da22fcc636c038ad804faf4') in 0.010943 seconds 
+  Import took 0.013246 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_magenta.prefab
+  artifactKey: Guid(cc75fe4428c283744b896a8a9ce76127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_magenta.prefab using Guid(cc75fe4428c283744b896a8a9ce76127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da6077398bc6613a521d8eae70a6cd7f') in 0.010218 seconds 
+  Import took 0.012458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_purple.prefab
+  artifactKey: Guid(886227689b8d46f4ba2e748e83a1d3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_purple.prefab using Guid(886227689b8d46f4ba2e748e83a1d3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a501e5cd5140b573b6508c590e70333') in 0.010147 seconds 
+  Import took 0.012407 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_purple.prefab
+  artifactKey: Guid(e216a1777ca862a4c9853a4acf09eff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_purple.prefab using Guid(e216a1777ca862a4c9853a4acf09eff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '969ec484806f36cef2a0067f09d01439') in 0.009738 seconds 
+  Import took 0.012038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_red.prefab
+  artifactKey: Guid(2585d4f98266e58409294addab67f5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_red.prefab using Guid(2585d4f98266e58409294addab67f5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dcf6cfa99ebbfd13df0103095ddf7f9') in 0.009238 seconds 
+  Import took 0.011658 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/lamp_red.prefab
+  artifactKey: Guid(4f4a7d3daf53c5d418be6dc7db90f106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/lamp_red.prefab using Guid(4f4a7d3daf53c5d418be6dc7db90f106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3645dd019596f18782f6c0ef864feccf') in 0.009886 seconds 
+  Import took 0.012145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/chest_of_drawers.prefab
+  artifactKey: Guid(39b055d6ab9fe6e4f845eb407f011779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/chest_of_drawers.prefab using Guid(39b055d6ab9fe6e4f845eb407f011779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd64d5cd0b4cff39b628bece7541150c2') in 0.012944 seconds 
+  Import took 0.015279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/lamp_blue.prefab
+  artifactKey: Guid(1b08dd842612cf344911cfb953678994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/lamp_blue.prefab using Guid(1b08dd842612cf344911cfb953678994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd79f9e8ceea8fd02314adfd82d6d691') in 0.009898 seconds 
+  Import took 0.012151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_green.prefab
+  artifactKey: Guid(8cb11f6b8ecd33a43af0fb7af8be13dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_green.prefab using Guid(8cb11f6b8ecd33a43af0fb7af8be13dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'febabbc22a4e005b8664f50cd581d3ec') in 0.009388 seconds 
+  Import took 0.011675 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_yellow.prefab
+  artifactKey: Guid(c5cfadf2d56a2fd4b8bb04b0a92ef380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_yellow.prefab using Guid(c5cfadf2d56a2fd4b8bb04b0a92ef380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cac09720aaa0818314a7fc5a0e79ce0a') in 0.009696 seconds 
+  Import took 0.011887 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/wardrobe.prefab
+  artifactKey: Guid(e7bde172665374241b224b6565a94d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/wardrobe.prefab using Guid(e7bde172665374241b224b6565a94d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9cd0000e1693ad7eba762c21e76e09a') in 0.012249 seconds 
+  Import took 0.014660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_magenta.prefab
+  artifactKey: Guid(76565f7b4abdce140a1afca00d26f061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_magenta.prefab using Guid(76565f7b4abdce140a1afca00d26f061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faf95365e5a1ec17add2616a4b3de05b') in 0.009895 seconds 
+  Import took 0.012149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/frame.prefab
+  artifactKey: Guid(248238f282b139d4b9a7e8d2be2f6584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/frame.prefab using Guid(248238f282b139d4b9a7e8d2be2f6584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1d5c620d2ee2ee95ba3e8e536309e4d') in 0.010512 seconds 
+  Import took 0.012719 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_red.prefab
+  artifactKey: Guid(24c7434dd4e21084dbc96d7b3d8ec005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_red.prefab using Guid(24c7434dd4e21084dbc96d7b3d8ec005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d1f63b928b0d2b3a7aa5a33aaf1912c') in 0.009611 seconds 
+  Import took 0.011816 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_yellow.prefab
+  artifactKey: Guid(9d95d6b3c404dec45a53268d2a4fdc91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_yellow.prefab using Guid(9d95d6b3c404dec45a53268d2a4fdc91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5c1f3cd735c7300ea391353b8e78b09') in 0.009499 seconds 
+  Import took 0.011669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/rug_black.prefab
+  artifactKey: Guid(5c40df0b0d1910d4abff6e2dcc9a54aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/rug_black.prefab using Guid(5c40df0b0d1910d4abff6e2dcc9a54aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d88ca97060f1bd17acc387ea5cef848') in 0.009236 seconds 
+  Import took 0.011538 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/rug_green.prefab
+  artifactKey: Guid(6e67ee69b3fbc4145ae1b5cf7cd08d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/rug_green.prefab using Guid(6e67ee69b3fbc4145ae1b5cf7cd08d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd91a016d85ad003ce4af7251becf0521') in 0.009456 seconds 
+  Import took 0.011634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_orange.prefab
+  artifactKey: Guid(efd5aec90baf90d4983460b29c30e782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_orange.prefab using Guid(efd5aec90baf90d4983460b29c30e782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82abda1002cbe6d174658611c830a8d2') in 0.010969 seconds 
+  Import took 0.013105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/rug_blue.prefab
+  artifactKey: Guid(09582b1b90441d8489763b8ab0159faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/rug_blue.prefab using Guid(09582b1b90441d8489763b8ab0159faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aec22e8b44be3eed3d1c8954965c20e6') in 0.009602 seconds 
+  Import took 0.011879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_cyan.prefab
+  artifactKey: Guid(f6e73dd8a00360a4c835f2a83061cc9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_cyan.prefab using Guid(f6e73dd8a00360a4c835f2a83061cc9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0d8468b19d051dc39b7fc2da79ab9be') in 0.009136 seconds 
+  Import took 0.011409 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/rug_red.prefab
+  artifactKey: Guid(47f266a022aeece478d5eea14e967e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/rug_red.prefab using Guid(47f266a022aeece478d5eea14e967e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9b2a67be4aa505be57bac7d514fbc0b') in 0.019806 seconds 
+  Import took 0.022013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_orange.prefab
+  artifactKey: Guid(0c7ce550e9584194baa168d93d8f4cb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_orange.prefab using Guid(0c7ce550e9584194baa168d93d8f4cb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92c8657c32819a2584e2e013ad920c50') in 0.009992 seconds 
+  Import took 0.012446 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/night_stand.prefab
+  artifactKey: Guid(61285939438490c4b9b0262c84585dea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/night_stand.prefab using Guid(61285939438490c4b9b0262c84585dea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab02bd060ea3b36f63c8f2110093ad71') in 0.012063 seconds 
+  Import took 0.014498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_light_blue.prefab
+  artifactKey: Guid(20b8a9773e5f5cc42bf6cfd7704f7a39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_light_blue.prefab using Guid(20b8a9773e5f5cc42bf6cfd7704f7a39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f32e7a99ed83934453866d836bb47aa') in 0.009672 seconds 
+  Import took 0.011900 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.197534 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_red.prefab
+  artifactKey: Guid(2585d4f98266e58409294addab67f5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_red.prefab using Guid(2585d4f98266e58409294addab67f5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6bd248e1e43774470f3a9939f948f4d') in 0.007609 seconds 
+  Import took 0.009944 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012773 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_light_blue.prefab
+  artifactKey: Guid(03df76a469675614cbf1784f15256f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_light_blue.prefab using Guid(03df76a469675614cbf1784f15256f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '653a509a78d202253e50abd5d95e207c') in 0.008870 seconds 
+  Import took 0.011338 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_blue.prefab
+  artifactKey: Guid(cb0e053fd89fe024dbd8be9cdb52019a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_blue.prefab using Guid(cb0e053fd89fe024dbd8be9cdb52019a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4552f05b149aa78afe3b638a4ce04b92') in 0.007908 seconds 
+  Import took 0.010101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_magenta.prefab
+  artifactKey: Guid(cc75fe4428c283744b896a8a9ce76127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_magenta.prefab using Guid(cc75fe4428c283744b896a8a9ce76127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbcc2b8c01f2f6af7d7880cabddefcb6') in 0.008592 seconds 
+  Import took 0.010517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_purple.prefab
+  artifactKey: Guid(886227689b8d46f4ba2e748e83a1d3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_purple.prefab using Guid(886227689b8d46f4ba2e748e83a1d3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8cbc0a7433948b557327af9e48c86ef') in 0.008962 seconds 
+  Import took 0.011222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000114 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_purple.prefab
+  artifactKey: Guid(e216a1777ca862a4c9853a4acf09eff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_purple.prefab using Guid(e216a1777ca862a4c9853a4acf09eff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b129dcc8eb4d96245d9ff3ae93ca42bd') in 0.010908 seconds 
+  Import took 0.013144 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/lamp_red.prefab
+  artifactKey: Guid(4f4a7d3daf53c5d418be6dc7db90f106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/lamp_red.prefab using Guid(4f4a7d3daf53c5d418be6dc7db90f106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1551b9ee7a8d87887ad5afae559145f0') in 0.009044 seconds 
+  Import took 0.011463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/chest_of_drawers.prefab
+  artifactKey: Guid(39b055d6ab9fe6e4f845eb407f011779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/chest_of_drawers.prefab using Guid(39b055d6ab9fe6e4f845eb407f011779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b25919cb7c77f83ef054020f58026236') in 0.011872 seconds 
+  Import took 0.014289 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/lamp_blue.prefab
+  artifactKey: Guid(1b08dd842612cf344911cfb953678994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/lamp_blue.prefab using Guid(1b08dd842612cf344911cfb953678994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90ba9483b0f6c0e6961b1e8d018be667') in 0.013616 seconds 
+  Import took 0.015962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_green.prefab
+  artifactKey: Guid(8cb11f6b8ecd33a43af0fb7af8be13dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_green.prefab using Guid(8cb11f6b8ecd33a43af0fb7af8be13dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45d8951603389db23ba5fef165b7d10b') in 0.010612 seconds 
+  Import took 0.012804 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_yellow.prefab
+  artifactKey: Guid(c5cfadf2d56a2fd4b8bb04b0a92ef380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_yellow.prefab using Guid(c5cfadf2d56a2fd4b8bb04b0a92ef380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25f77bcfda189085d47453a39afd97d2') in 0.008157 seconds 
+  Import took 0.010293 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/wardrobe.prefab
+  artifactKey: Guid(e7bde172665374241b224b6565a94d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/wardrobe.prefab using Guid(e7bde172665374241b224b6565a94d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05a43fe1f452c657911a17504e52818e') in 0.010651 seconds 
+  Import took 0.012943 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_magenta.prefab
+  artifactKey: Guid(76565f7b4abdce140a1afca00d26f061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_magenta.prefab using Guid(76565f7b4abdce140a1afca00d26f061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb9a8da053184a07da828be33dcf2be9') in 0.010929 seconds 
+  Import took 0.013114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/frame.prefab
+  artifactKey: Guid(248238f282b139d4b9a7e8d2be2f6584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/frame.prefab using Guid(248238f282b139d4b9a7e8d2be2f6584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a661a1516bf0dfe84edf775d20b1a6ed') in 0.012502 seconds 
+  Import took 0.014763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_red.prefab
+  artifactKey: Guid(24c7434dd4e21084dbc96d7b3d8ec005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_red.prefab using Guid(24c7434dd4e21084dbc96d7b3d8ec005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b37e27c33451bf878e84063a1df49f42') in 0.011346 seconds 
+  Import took 0.013483 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_yellow.prefab
+  artifactKey: Guid(9d95d6b3c404dec45a53268d2a4fdc91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_yellow.prefab using Guid(9d95d6b3c404dec45a53268d2a4fdc91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2774ebde008df54945278d393e2d3ff5') in 0.008097 seconds 
+  Import took 0.010393 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/rug_black.prefab
+  artifactKey: Guid(5c40df0b0d1910d4abff6e2dcc9a54aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/rug_black.prefab using Guid(5c40df0b0d1910d4abff6e2dcc9a54aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fee79493640713bead86f2f02cd09cce') in 0.007867 seconds 
+  Import took 0.010004 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/rug_green.prefab
+  artifactKey: Guid(6e67ee69b3fbc4145ae1b5cf7cd08d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/rug_green.prefab using Guid(6e67ee69b3fbc4145ae1b5cf7cd08d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03d840500e6a352b1dc50126f755fda0') in 0.008583 seconds 
+  Import took 0.010793 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_orange.prefab
+  artifactKey: Guid(efd5aec90baf90d4983460b29c30e782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_orange.prefab using Guid(efd5aec90baf90d4983460b29c30e782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bda7d785d73551ccf29ce958faff965') in 0.008020 seconds 
+  Import took 0.010142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/rug_blue.prefab
+  artifactKey: Guid(09582b1b90441d8489763b8ab0159faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/rug_blue.prefab using Guid(09582b1b90441d8489763b8ab0159faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68d2dfe7cf37fe6c7fbb5e47b3b9dbc9') in 0.007641 seconds 
+  Import took 0.009793 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_cyan.prefab
+  artifactKey: Guid(f6e73dd8a00360a4c835f2a83061cc9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_cyan.prefab using Guid(f6e73dd8a00360a4c835f2a83061cc9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a3191204f8a5afeef54292933101506') in 0.009274 seconds 
+  Import took 0.011478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/rug_red.prefab
+  artifactKey: Guid(47f266a022aeece478d5eea14e967e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/rug_red.prefab using Guid(47f266a022aeece478d5eea14e967e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce81ff921ef45f69fb2170562cbc40e2') in 0.009948 seconds 
+  Import took 0.012279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_orange.prefab
+  artifactKey: Guid(0c7ce550e9584194baa168d93d8f4cb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_orange.prefab using Guid(0c7ce550e9584194baa168d93d8f4cb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '883e267670bca3c6a232442134f28100') in 0.008059 seconds 
+  Import took 0.010259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/night_stand.prefab
+  artifactKey: Guid(61285939438490c4b9b0262c84585dea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/night_stand.prefab using Guid(61285939438490c4b9b0262c84585dea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ef43fd3f32ad136625b1cd8d9df6b04') in 0.009768 seconds 
+  Import took 0.012001 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/double_bed_light_blue.prefab
+  artifactKey: Guid(20b8a9773e5f5cc42bf6cfd7704f7a39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/double_bed_light_blue.prefab using Guid(20b8a9773e5f5cc42bf6cfd7704f7a39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8971f3b5241fe44f5626b504a155e62') in 0.008158 seconds 
+  Import took 0.010441 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.055012 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_blue.prefab
+  artifactKey: Guid(b21e89a06afcfe34e9558e74d73557b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_blue.prefab using Guid(b21e89a06afcfe34e9558e74d73557b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae94cd0e6d54c10f923a337217f72224') in 0.009297 seconds 
+  Import took 0.011850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_cyan.prefab
+  artifactKey: Guid(f499765c45f62c2479abb1d00d5b0974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_cyan.prefab using Guid(f499765c45f62c2479abb1d00d5b0974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a79196af5ab8853ea831ae474e932988') in 0.012188 seconds 
+  Import took 0.014526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Assets/Bedroom/Prefabs/bed_green.prefab
+  artifactKey: Guid(0cf481468ad48294a8aa5c65f9400fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Bedroom/Prefabs/bed_green.prefab using Guid(0cf481468ad48294a8aa5c65f9400fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7cacc7dfb7317f345a3723d73f7a42a') in 0.009898 seconds 
+  Import took 0.012194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 690.909278 seconds.
+  path: Assets/Assets/VoxelCharacters/Animation/Bed NPC.controller
+  artifactKey: Guid(a26e939b350be61488e644ac92bb8514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/VoxelCharacters/Animation/Bed NPC.controller using Guid(a26e939b350be61488e644ac92bb8514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af79d596a33fdbe17e999f248fe2d941') in 0.007476 seconds 
+  Import took 0.010127 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003720 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.948 seconds
+Domain Reload Profiling:
+	ReloadAssembly (948ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (776ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (263ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (290ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (191ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1535 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 75.3 MB.
+System memory in use after: 75.1 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2029.
+Total: 2.711300 ms (FindLiveObjects: 0.213800 ms CreateObjectMapping: 0.040100 ms MarkObjects: 2.215600 ms  DeleteObjects: 0.239300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003619 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.833 seconds
+Domain Reload Profiling:
+	ReloadAssembly (833ms)
+		BeginReloadAssembly (93ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (684ms)
+			LoadAssemblies (81ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (233ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (256ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (169ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1535 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 75.3 MB.
+System memory in use after: 75.1 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2031.
+Total: 2.605700 ms (FindLiveObjects: 0.188400 ms CreateObjectMapping: 0.038400 ms MarkObjects: 2.134300 ms  DeleteObjects: 0.243700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 122.537446 seconds.
+  path: Assets/Animations
+  artifactKey: Guid(0cedce9a794316a48bb8e373a0431ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations using Guid(0cedce9a794316a48bb8e373a0431ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38353c716baa6dc21cbbbabf88567d95') in 0.008634 seconds 
+  Import took 0.011113 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003545 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.899 seconds
+Domain Reload Profiling:
+	ReloadAssembly (900ms)
+		BeginReloadAssembly (82ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (760ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (255ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (292ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (193ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1535 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 75.3 MB.
+System memory in use after: 75.1 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2033.
+Total: 2.866200 ms (FindLiveObjects: 0.223100 ms CreateObjectMapping: 0.044000 ms MarkObjects: 2.304600 ms  DeleteObjects: 0.293400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
