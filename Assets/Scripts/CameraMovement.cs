@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    public PlayerMovement playerMovement;
     public Transform objectToFollow;
     public float followSpeed = 10f;
     public float sensitivity = 100f;//감도
@@ -37,37 +38,43 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //카메라 y축 회전시는 화면 좌우로 이동하기때문에 x와 yinput 반대로,
-        rotX += -(Input.GetAxis("Mouse Y")) * sensitivity * Time.deltaTime;//-안곱하면 마우스 위로올릴 때 아래 봄
-        rotY += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        if (playerMovement.canMove)
+        {
+            //카메라 y축 회전시는 화면 좌우로 이동하기때문에 x와 yinput 반대로,
+            rotX += -(Input.GetAxis("Mouse Y")) * sensitivity * Time.deltaTime;//-안곱하면 마우스 위로올릴 때 아래 봄
+            rotY += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
 
-        //최소,최대 각도안에서 움직임 
-        rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
+            //최소,최대 각도안에서 움직임 
+            rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
 
-        Quaternion rot = Quaternion.Euler(rotX, rotY, 0);
-        transform.rotation = rot;
+            Quaternion rot = Quaternion.Euler(rotX, rotY, 0);
+            transform.rotation = rot;
+        }
     }
 
     //update()끝난뒤에 실행
     private void LateUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, objectToFollow.position, followSpeed);
-
-        finalDir = transform.TransformPoint(dirNormalized * maxDistance);//TransformPoint:로컬좌표를 글로벌로 변환
-
-
-        //장애물에 카메라 닿을 때 카메라 옮기기
-        RaycastHit hit;
-        //부딛혔다면
-        if(Physics.Linecast(transform.position,finalDir, out hit))
+        if (playerMovement.canMove)
         {
-            finalDistance = Mathf.Clamp(hit.distance, minDistance, maxDistance);
-        }//아니라면
-        else
-        {
-            finalDistance = maxDistance;
+            transform.position = Vector3.MoveTowards(transform.position, objectToFollow.position, followSpeed);
+
+            finalDir = transform.TransformPoint(dirNormalized * maxDistance);//TransformPoint:로컬좌표를 글로벌로 변환
+
+
+            //장애물에 카메라 닿을 때 카메라 옮기기
+            RaycastHit hit;
+            //부딛혔다면
+            if (Physics.Linecast(transform.position, finalDir, out hit))
+            {
+                finalDistance = Mathf.Clamp(hit.distance, minDistance, maxDistance);
+            }//아니라면
+            else
+            {
+                finalDistance = maxDistance;
+            }
+
+            realCamera.localPosition = Vector3.Lerp(realCamera.localPosition, dirNormalized * finalDistance, Time.deltaTime * smoothness);
         }
-
-        realCamera.localPosition = Vector3.Lerp(realCamera.localPosition, dirNormalized * finalDistance, Time.deltaTime * smoothness);
     }
 }

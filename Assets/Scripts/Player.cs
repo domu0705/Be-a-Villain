@@ -1,179 +1,138 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [Header("Movement")]
-    [SerializeField]
-    float speed;
-    [SerializeField]
-    bool canMove;
-    [SerializeField]
-    float jumpPower;
-
-
-    [Header("Player Power")]
-    [SerializeField]
-    float maxHealth = 100;
-    [SerializeField]
-    float maxSword = 10;
-    [SerializeField]
-    float maxShield = 10;
-
-    [Header("Player Info")]
-    [SerializeField]
-    float curHealth = 100;
-    [SerializeField]
-    float curSword = 5;
-    [SerializeField]
-    float curShield = 2;
-
-    Camera camera;
+    Camera cam;
     Animator anim;
     Rigidbody rigid;
-    CharacterController controller;
     GameObject nearObj;//상호작용 가능한 object
+    PlayerMovement playerMovement;
 
-    /*player movement*/
-    float hAxis;
-    float vAxis;
-    bool spacebarPressed;
-    bool onGround;
-    bool isWalking;
-    Vector3 moveVec;
+    [Header("Player Power")]
+    public float maxHealth = 100;
+    public int maxSword = 10;
+    public int maxShield = 10;
 
-    /*camera*/
-    public bool toggleCameraRotation;
-    public float smoothness = 10f;
+    [Header("Player Info")]
+    public int swordNum = -1; //무기 없는상태(-1)에서 시작
+    public float coin = 0;
+
+    public float curHealth = 100;
+    public float curSwordPower = 5;
+    public float curShieldPower = 2;
+
+    [SerializeField]
+    bool isDead = false;
+
 
     /*other input*/
-    [SerializeField]bool eDown;
+    [SerializeField]
+    bool eDown;
+    [SerializeField]
+    bool leftMouseDown;
+    [SerializeField]
+    bool rightouseDown;
 
+    /*Weapons*/
+    public GameObject[] swordAry;
 
     /*UI*/
     public RectTransform healthBar;
     public RectTransform swordBar;
     public RectTransform shieldBar;
+    public Text coinText;
 
     void Awake()
     {
         anim = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody>();
-        controller = GetComponent<CharacterController>();
-        camera = Camera.main;
+        playerMovement = GetComponent<PlayerMovement>();
 
-        canMove = true;
-        onGround = true;
+        cam = Camera.main;
+    }
+
+    private void Start()
+    {
+        /*player info UI 세팅*/
+        ChangeCoin(0);
+        ChangeHealth(0);
+        swordBar.localScale = new Vector3((float)curSwordPower / maxSword, 1, 1);
+        shieldBar.localScale = new Vector3((float)curShieldPower / maxShield, 1, 1);
     }
 
     void Update()
     {
-        if (canMove)
-        {
-            GetInput();
+        GetInput();
 
-            Move();
-            Jump();
-            Turn();
-            Interaction();
-            //attack();
-        }
-    }
-
-    void GetInput()
-    {
-        hAxis = Input.GetAxisRaw("Horizontal");
-        vAxis = Input.GetAxisRaw("Vertical"); // horizontal, vertical 은 edit>project settings에서 변경
-        spacebarPressed = Input.GetKeyDown(KeyCode.Space);
-
-        eDown = Input.GetKeyDown("e");// KeyCode.E);
-
-    }
-
-    void Turn()
-    {
-        if (Input.GetKey(KeyCode.LeftAlt))//캐릭터 고정하고 둘러보기
-        {
-            toggleCameraRotation = true;
-        }
-        else
-        {
-            toggleCameraRotation = false;
-        }
-
-    }
-
-    void Move()
-    {
-        Vector3 foward = transform.TransformDirection(Vector3.forward);//로컬의 foward를 클로벌 벡터로 반환
-        Vector3 right = transform.TransformDirection(Vector3.right);
-
-        Vector3 localMoveVec = (foward * Input.GetAxisRaw("Vertical") + right * Input.GetAxisRaw("Horizontal")).normalized;//카메라의 시점에 따라 로컬 좌표에서 앞인 곳으로 움직이기
-
-        transform.position += localMoveVec * speed * Time.deltaTime;
-
-        //animation
-        isWalking = (localMoveVec != Vector3.zero);
-        anim.SetBool("isWalking", isWalking);
-    }
-
-    void Jump()
-    {
-        if (spacebarPressed && onGround)
-        {
-            Debug.Log("jump()");
-            rigid.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
-            anim.SetBool("isJumping", true);//animation이 바로 착지로 가는 것을 막음.
-            anim.SetTrigger("doJump");//SetBool("isJumping", true); 로 anim을 시작하면, 점프 에니메이션이 무한으로 계속 시작됨. 그래서 trigger로 anim을 한번만 실행
-            onGround = false;
-        }
-    }
-
-    void Interaction() 
-    {
-        if (eDown && nearObj)
-        {
-            Debug.Log("Interaction()");
-            if(nearObj.tag == "Shop")
-            {
-                Debug.Log("in shop");
-                Shop shop = nearObj.GetComponent<Shop>();
-                shop.Enter();
-            }
-        }
-    
-    
-    }
-
-    void UpdateBarUI()
-    {
-        Debug.Log("UpdateBarUI()");
-        healthBar.localScale = new Vector3((float)curHealth / maxHealth, 1, 1);
-        swordBar.localScale = new Vector3((float)curSword / maxSword, 1, 1);
-        shieldBar.localScale = new Vector3((float)curShield / maxShield, 1, 1);
+        Interaction();
+        Attack();
     }
 
     private void LateUpdate()
     {
-        if (toggleCameraRotation != true)
-        {
-            Vector3 playerRotate = Vector3.Scale(camera.transform.forward, new Vector3(1, 0, 1));
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(playerRotate), Time.deltaTime * smoothness);
-        }
-
         UpdateBarUI();
     }
 
+    void GetInput()
+    {
+        eDown = Input.GetKeyDown("e");// KeyCode.E);
+        leftMouseDown = Input.GetButton("Fire1"); //마우스 왼쪽
+        //rightMouseDown = Input.GetButtonDown("Fire2");//마우스 우클릭
+    }
+
+
+    void Interaction()
+    {
+        if (eDown && nearObj)
+        {
+            if (nearObj.tag == "Shop")
+            {
+                Shop shop = nearObj.GetComponent<Shop>();
+                shop.Enter(this);
+            }
+        }
+    }
+
+    void Attack()
+    {
+        if (leftMouseDown)
+        {
+            anim.SetTrigger("doSwing");
+        }
+    }
+
+    void UpdateBarUI()
+    {
+        healthBar.localScale = new Vector3((float)curHealth / maxHealth, 1, 1);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
-        {
-            anim.SetBool("isJumping", false);
-            onGround = true;
 
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if ((other.tag == "Coin") && (!isDead))
+        {
+            Debug.Log("getcoin()");
+            Coin coinScript = other.GetComponent<Coin>();
+            ChangeCoin(coinScript.value);
+            Destroy(other.gameObject);
         }
+    }
+
+    public void ResumePlayer()
+    {
+        playerMovement.canMove = true;
+    }
+
+    public void StopPlayer()
+    {
+        playerMovement.canMove = false;
     }
 
     private void OnTriggerStay(Collider other)
@@ -191,5 +150,44 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void ChangeCoin(int val)
+    {
+        coin += val;
+        coinText.text = "X " + coin;
+    }
 
+    public void ChangeHealth(int val)
+    {
+        curHealth += val;
+        if (curHealth > maxHealth)
+            curHealth = maxHealth;
+
+        healthBar.localScale = new Vector3((float)curHealth / maxHealth, 1, 1);
+    }
+
+    public void ChangeSword()
+    {
+        //무기 바꿔들기
+        if (swordNum >= 0)//이전에 들고있던 무기가 있다면 없애기
+        {
+            Debug.Log("swordNum="+ swordNum);
+            swordAry[swordNum].SetActive(false);
+        }
+        swordNum++;
+        swordAry[swordNum].SetActive(true);
+
+        //공격력 증가
+        Item newSword = swordAry[swordNum].GetComponent<Item>();
+        curSwordPower = newSword.value;
+        swordBar.localScale = new Vector3((float)curSwordPower / maxSword, 1, 1);
+    }
+
+    public void ChangeShield(int val)
+    {
+        curShieldPower += val;
+        if (curShieldPower > maxShield)
+            curShieldPower = maxShield;
+
+        shieldBar.localScale = new Vector3((float)curShieldPower / maxShield, 1, 1);
+    }
 }
