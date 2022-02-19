@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public GameManager manager;
+
     Camera cam;
     Animator anim;
     Rigidbody rigid;
+    [SerializeField]
     GameObject nearObj;//상호작용 가능한 object
     PlayerMovement playerMovement;
 
@@ -93,6 +96,12 @@ public class Player : MonoBehaviour
                 Shop shop = nearObj.GetComponent<Shop>();
                 shop.Enter(this);
             }
+
+            else if (nearObj.tag == "Object") //상호작용 가능한 사물 or NPC
+            {
+                ObjectData objScript = nearObj.GetComponent<ObjectData>();
+                manager.Action(objScript);
+            }
         }
     }
 
@@ -135,20 +144,6 @@ public class Player : MonoBehaviour
         playerMovement.canMove = false;
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        nearObj = other.gameObject;
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Shop")
-        {
-            Shop shop = nearObj.GetComponent<Shop>();
-            shop.Exit();
-            nearObj = null;
-        }
-    }
 
     public void ChangeCoin(int val)
     {
@@ -170,7 +165,7 @@ public class Player : MonoBehaviour
         //무기 바꿔들기
         if (swordNum >= 0)//이전에 들고있던 무기가 있다면 없애기
         {
-            Debug.Log("swordNum="+ swordNum);
+            Debug.Log("swordNum=" + swordNum);
             swordAry[swordNum].SetActive(false);
         }
         swordNum++;
@@ -189,5 +184,21 @@ public class Player : MonoBehaviour
             curShieldPower = maxShield;
 
         shieldBar.localScale = new Vector3((float)curShieldPower / maxShield, 1, 1);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if ((other.tag == "Shop") || (other.tag == "Object"))
+        {
+            nearObj = other.gameObject;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if ((nearObj.tag == "Shop") || (nearObj.tag == "Object"))
+        {
+            nearObj = null;
+        }
     }
 }

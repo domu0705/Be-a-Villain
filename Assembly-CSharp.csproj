@@ -54,20 +54,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Assets\Imported Assets\quarterViewPlayer\ReadMe\Scripts\ReadmeBE5.cs" />
     <Compile Include="Assets\Scripts\Shop.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Assets\Imported Assets\Bedroom\Scripts\AnimationDebug.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Coin.cs" />
-    <Compile Include="Assets\Scripts\Item.cs" />
+    <Compile Include="Assets\Assets\Imported Assets\Bedroom\Scripts\AnimationDebug.cs" />
+    <Compile Include="Assets\Scripts\ObjectData.cs" />
+    <Compile Include="Assets\Scripts\TalkManager.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\QuestManager.cs" />
+    <Compile Include="Assets\Scripts\QuestData.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Assets\Imported Assets\VoxelCharacters\ToonShading\Shaders\ToonLitOutline.shader" />
-    <None Include="Assets\Assets\Imported Assets\VoxelCharacters\ToonShading\Shaders\ToonLit.shader" />
-    <None Include="Assets\Assets\Imported Assets\VoxelCharacters\ToonShading\Shaders\ToonBasic.shader" />
-    <None Include="Assets\Assets\Imported Assets\VoxelCharacters\ToonShading\Shaders\ToonBasicOutline.shader" />
-    <None Include="Assets\Assets\Imported Assets\VoxelCharacters\ToonShading\Shaders\Mirror 1.shader" />
+    <None Include="Assets\Assets\Imported Assets\Characters_vox\ToonShading\Shaders\ToonLitOutline.shader" />
+    <None Include="Assets\Assets\Imported Assets\Characters_vox\ToonShading\Shaders\ToonLit.shader" />
+    <None Include="Assets\Assets\Imported Assets\Characters_vox\ToonShading\Shaders\ToonBasic.shader" />
+    <None Include="Assets\Assets\Imported Assets\Characters_vox\ToonShading\Shaders\ToonBasicOutline.shader" />
+    <None Include="Assets\Assets\Imported Assets\Characters_vox\ToonShading\Shaders\Mirror 1.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

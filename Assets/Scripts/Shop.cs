@@ -55,10 +55,7 @@ public class Shop : MonoBehaviour
         //플레이어의 무기에 따라 다음 무기를 보여줌
         curSwordNum = player.swordNum + 1;
 
-        if (curSwordNum > maxSwordNum) //마지막 무기 사면 무기 아이템 삭제
-            ItemAry[1].SetActive(false);
-        else
-            swordItem = swordAry[curSwordNum].GetComponent<Item>();
+        EraseItem();
 
         //아이템에 따라 text 업데이트]
         healthName.text = healthItem.itemName;
@@ -69,6 +66,31 @@ public class Shop : MonoBehaviour
         shieldCost.text = shieldItem.price + " G";
 
 
+    }
+
+    void EraseItem()
+    {
+        /* 마지막 무기 사면 무기 아이템 삭제 */
+        if (curSwordNum > maxSwordNum) 
+            ItemAry[1].SetActive(false);
+        else
+            swordItem = swordAry[curSwordNum].GetComponent<Item>();
+
+        /* 체력 다 차면 체력 아이템 삭제 */
+        if(player.curHealth >= player.maxHealth)
+        {
+            ItemAry[0].SetActive(false);
+        }
+        else
+        {
+            ItemAry[0].SetActive(true);
+        }
+
+        /*  방어력 다 차면 방어력 아이템 삭제 */
+        if (player.curShieldPower >= player.maxShield)
+        {
+            ItemAry[2].SetActive(false);
+        }
     }
 
     public void Buy(int btnIndex)
@@ -136,8 +158,8 @@ public class Shop : MonoBehaviour
 
     public void Exit()
     {
-
         shopUI.anchoredPosition = Vector3.down * 1000;
         player.ResumePlayer();
+        player = null;
     }
 }
