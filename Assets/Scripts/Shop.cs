@@ -91,6 +91,8 @@ public class Shop : MonoBehaviour
         {
             ItemAry[2].SetActive(false);
         }
+
+        
     }
 
     public void Buy(int btnIndex)

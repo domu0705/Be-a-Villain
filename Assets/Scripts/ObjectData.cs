@@ -14,23 +14,36 @@ public class ObjectData : MonoBehaviour
         talkData = new Dictionary<int, string[]>();
 
         GenerateTalkData();
+        GeneratePortraitData();
     }
 
     void GenerateTalkData()
     {
-        talkData.Add(0, new string[] {"아~ 누가 공주 역할로 날 캐스팅한다면 좋을텐데...", "용사님이 나타날 것만 같은 날이야~"});
-        talkData.Add(1, new string[] { "이거 퀘스트 1번 대산데..", "퉤스트 1번 대사 두번째야.." });
+        talkData.Add(0, new string[] {"green npc 퀘스트 0번 대사야~~", "퀘스트 0번의 두번째 대사야~" });
+        talkData.Add(1, new string[] { "이거 퀘스트 1번 대산데..", "퉤스트 1번 대사 두번째야!" });
+    }
+
+    void GeneratePortraitData()
+    {
+
     }
 
     public string GetTalkData(int questNum,int talkIndex)
     {
-        return talkData[questNum][talkIndex];
+        Debug.Log("GetTalkData() | questNum=" + questNum + " talkIndex=" + talkIndex);
+
+        if (talkIndex < talkData[questNum].Length)
+            return talkData[questNum][talkIndex];
+        else
+            return null;
     }
+
     void lookAt(GameObject obj)
     {
             Vector3 lookVec = obj.transform.position - this.transform.position;
             this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.LookRotation(lookVec), Time.deltaTime * lookSpeed);
     }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player" && isNpc)

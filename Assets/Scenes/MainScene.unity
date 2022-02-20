@@ -18236,6 +18236,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc43ff0e645a0de4ab6212706cfc043c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  talkText: {fileID: 946695075}
+  talkPanel: {fileID: 1636921458}
+  portraitImg: {fileID: 1242332890}
+  arrowImg: {fileID: 1796820493}
+  playerMovement: {fileID: 5461052780225552813}
   talkIndex: 0
 --- !u!4 &718300621
 Transform:
@@ -24492,7 +24497,7 @@ GameObject:
   - component: {fileID: 946695076}
   - component: {fileID: 946695075}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Talk Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24514,7 +24519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 15.700013, y: 0}
+  m_AnchoredPosition: {x: 15.700073, y: 0}
   m_SizeDelta: {x: -31.399973, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &946695075
@@ -44448,14 +44453,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1636921458}
   - component: {fileID: 1636921460}
-  - component: {fileID: 1636921459}
   m_Layer: 5
   m_Name: Talk Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1636921458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44472,41 +44476,11 @@ RectTransform:
   m_Father: {fileID: 1268442126}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 800, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1636921459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636921457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1636921460
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46085,6 +46059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdecdc3854338948945f12b3247a086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1878740037}
+  playerMovement: {fileID: 5461052780225552813}
   talkManager: {fileID: 718300620}
   questManager: {fileID: 1901710700}
 --- !u!4 &1698446289
@@ -47470,7 +47446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3689515951906905501, guid: 8abd62a2eceffa44da7fb651f5762284, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4069032608350865191, guid: 8abd62a2eceffa44da7fb651f5762284, type: 3}
       propertyPath: m_RootOrder
