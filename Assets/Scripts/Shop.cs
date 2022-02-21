@@ -64,8 +64,6 @@ public class Shop : MonoBehaviour
         swordCost.text = swordItem.price + " G";
         shieldName.text = shieldItem.itemName;
         shieldCost.text = shieldItem.price + " G";
-
-
     }
 
     void EraseItem()
@@ -156,7 +154,6 @@ public class Shop : MonoBehaviour
     {
         npcText.text = middleText;
     }
-
 
     public void Exit()
     {

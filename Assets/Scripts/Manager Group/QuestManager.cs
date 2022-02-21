@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    
     public int curQuestNum;
     public int maxQuestNum = 10;
     public int semiQuestIndex = 0; //한 퀘스트 내부에서 이벤트가 어디까지 진행됐는지를 마크함.
