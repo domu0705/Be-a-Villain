@@ -1,3 +1,4 @@
+using BAV;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -33,7 +34,8 @@ public class Player : MonoBehaviour
 		if (curHealth > maxHealth)
 			curHealth = maxHealth;
 
-		healthBar.localScale = new Vector3((float)curHealth / maxHealth, 1, 1);
+		//HudUI.Instance.HealthBar.localScale = new Vector3((float)curHealth / maxHealth, 1, 1);
+		//healthBar.localScale = new Vector3((float)curHealth / maxHealth, 1, 1);
 	}
 	public void ChangeSword()
 	{
@@ -60,6 +62,9 @@ public class Player : MonoBehaviour
 		shieldBar.localScale = new Vector3((float)curShieldPower / maxShield, 1, 1);
 	}
 
+	// Events ---------------------------------------------------------------------------------------
+	public event Action<Player, ObjectData> OnInteraction;
+
 
 
 	// Fields : caching -----------------------------------------------------------------------------
@@ -85,7 +90,8 @@ public class Player : MonoBehaviour
 				// GameManager를 싱글톤으로 만들었기 때문에 다음과 같은 코드도 가능하지만, 
 				// 가능하다면, 이벤트를 보내고, GameManager가 이벤트에 반응하는 식으로 하는것이 더 좋을 것 같아요.
 				var objScript = nearObj.GetComponent<ObjectData>();
-				GameManager.Instance.Action(objScript);
+				OnInteraction?.Invoke(this, objScript);
+				//GameManager.Instance.Action(objScript);
 			}
 		}
 	}

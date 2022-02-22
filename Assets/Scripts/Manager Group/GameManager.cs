@@ -6,7 +6,8 @@ public class GameManager : Singleton<GameManager>
 	public void Action(ObjectData obj)
 	{
 		player.Movement.Stop();
-		talkManager.Talk(questManager.curQuestNum, obj);
+		//talkManager.Talk(questManager.curQuestNum, obj);
+		TalkUI.Instance.Talk(questManager.curQuestNum, obj);
 	}
 
 
@@ -14,10 +15,15 @@ public class GameManager : Singleton<GameManager>
 	// Fields : caching -----------------------------------------------------------------------------
 	private Player player;
 
+	// Event Handlers -------------------------------------------------------------------------------
+	private void Player_OnInteraction(Player player, ObjectData obj)
+	{
+		player.Movement.Stop();
+		TalkUI.Instance.Talk(questManager.curQuestNum, obj);
+	}
 
 
 	// Unity Inspectors -----------------------------------------------------------------------------
-	public TalkManager talkManager;
 	public QuestManager questManager;
 
 	// Unity Messages -------------------------------------------------------------------------------
@@ -28,4 +34,14 @@ public class GameManager : Singleton<GameManager>
 		// 2022.02.22 by veramocor
 		player = FindObjectOfType<Player>();
 	}
+	private void OnEnable()
+	{
+		player.OnInteraction += Player_OnInteraction;
+	}
+	private void OnDisable()
+	{
+		player.OnInteraction -= Player_OnInteraction;
+	}
+
+	
 }
