@@ -104,6 +104,7 @@ public class Player : MonoBehaviour
 	}
 	private void updateBarUI()
 	{
+		//HudUI.Instance.UpdateHealth(curHealth, maxHealth);
 		healthBar.localScale = new Vector3((float)curHealth / maxHealth, 1, 1);
 	}
 	private void getInput()
