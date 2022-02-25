@@ -1,4 +1,3 @@
-using BAV;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -23,11 +22,7 @@ public class Player : MonoBehaviour
 	{
 		playerMovement.canMove = false;
 	}
-	public void ChangeCoin(int val)
-	{
-		coin += val;
-		coinText.text = "X " + coin;
-	}
+
 	public void ChangeHealth(int val)
 	{
 		curHealth += val;
@@ -51,7 +46,7 @@ public class Player : MonoBehaviour
 		//공격력 증가
 		Item newSword = swordAry[swordNum].GetComponent<Item>();
 		curSwordPower = newSword.value;
-		swordBar.localScale = new Vector3((float)curSwordPower / maxSword, 1, 1);
+		//swordBar.localScale = new Vector3((float)curSwordPower / maxSword, 1, 1);
 	}
 	public void ChangeShield(int val)
 	{
@@ -59,7 +54,7 @@ public class Player : MonoBehaviour
 		if (curShieldPower > maxShield)
 			curShieldPower = maxShield;
 
-		shieldBar.localScale = new Vector3((float)curShieldPower / maxShield, 1, 1);
+		//shieldBar.localScale = new Vector3((float)curShieldPower / maxShield, 1, 1);
 	}
 
 	// Events ---------------------------------------------------------------------------------------
@@ -87,11 +82,9 @@ public class Player : MonoBehaviour
 
 			else if (nearObj.tag == "Object") //상호작용 가능한 사물 or NPC
 			{
-				// GameManager를 싱글톤으로 만들었기 때문에 다음과 같은 코드도 가능하지만, 
-				// 가능하다면, 이벤트를 보내고, GameManager가 이벤트에 반응하는 식으로 하는것이 더 좋을 것 같아요.
+				/*이벤트를 보내고, GameManager가 이벤트에 반응*/
 				var objScript = nearObj.GetComponent<ObjectData>();
-				OnInteraction?.Invoke(this, objScript);
-				//GameManager.Instance.Action(objScript);
+				OnInteraction?.Invoke(this, objScript); //event뒤에 .Invoke() 함수는 OnInteraction에 등록된 모든 콜백함수를 실행시킴.
 			}
 		}
 	}
@@ -105,7 +98,7 @@ public class Player : MonoBehaviour
 	private void updateBarUI()
 	{
 		//HudUI.Instance.UpdateHealth(curHealth, maxHealth);
-		healthBar.localScale = new Vector3((float)curHealth / maxHealth, 1, 1);
+		//healthBar.localScale = new Vector3((float)curHealth / maxHealth, 1, 1);
 	}
 	private void getInput()
 	{
@@ -125,7 +118,7 @@ public class Player : MonoBehaviour
 	[SerializeField] private int maxShield = 10;
 	[Header("Player Info")]
 	[SerializeField] private int swordNum = -1; //무기 없는상태(-1)에서 시작
-	[SerializeField] private float coin = 0;
+	[SerializeField] private int coin = 0;
 	[SerializeField] private float curHealth = 100;
 	[SerializeField] private float curSwordPower = 5;
 	[SerializeField] private float curShieldPower = 2;
@@ -136,11 +129,7 @@ public class Player : MonoBehaviour
 	[SerializeField] private bool rightouseDown;
 	[Header("Weapons")]
 	[SerializeField] private GameObject[] swordAry;
-	[Header("UI")]
-	[SerializeField] private RectTransform healthBar;
-	[SerializeField] private RectTransform swordBar;
-	[SerializeField] private RectTransform shieldBar;
-	[SerializeField] private Text coinText;
+
 
 	// Unity Messages -------------------------------------------------------------------------------
 	private void Awake()
@@ -151,14 +140,16 @@ public class Player : MonoBehaviour
 
 		cam = Camera.main;
 	}
+
 	private void Start()
 	{
 		/*player info UI 세팅*/
-		ChangeCoin(0);
+		//ChangeCoin(0);
 		ChangeHealth(0);
-		swordBar.localScale = new Vector3((float)curSwordPower / maxSword, 1, 1);
-		shieldBar.localScale = new Vector3((float)curShieldPower / maxShield, 1, 1);
+		//swordBar.localScale = new Vector3((float)curSwordPower / maxSword, 1, 1);
+		//shieldBar.localScale = new Vector3((float)curShieldPower / maxShield, 1, 1);
 	}
+
 	private void Update()
 	{
 		getInput();
@@ -166,24 +157,28 @@ public class Player : MonoBehaviour
 		interaction();
 		attack();
 	}
+
 	private void LateUpdate()
 	{
 		updateBarUI();
 	}
+
 	private void OnCollisionEnter(Collision collision)
 	{
 
 	}
+
 	private void OnTriggerEnter(Collider other)
 	{
 		if ((other.tag == "Coin") && (!isDead))
 		{
 			Debug.Log("getcoin()");
 			Coin coinScript = other.GetComponent<Coin>();
-			ChangeCoin(coinScript.value);
+			//ChangeCoin(coinScript.value + coin);
 			Destroy(other.gameObject);
 		}
 	}
+
 	private void OnTriggerStay(Collider other)
 	{
 		if ((other.tag == "Shop") || (other.tag == "Object"))
@@ -191,6 +186,7 @@ public class Player : MonoBehaviour
 			nearObj = other.gameObject;
 		}
 	}
+
 	private void OnTriggerExit(Collider other)
 	{
 		if ((nearObj.tag == "Shop") || (nearObj.tag == "Object"))

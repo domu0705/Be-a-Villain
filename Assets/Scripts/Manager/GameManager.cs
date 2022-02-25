@@ -1,12 +1,14 @@
-using BAV.Common;
+using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+	// Properties -----------------------------------------------------------------------------------
+	public Player Player => player;
+
 	// Methods --------------------------------------------------------------------------------------
 	public void Action(ObjectData obj)
 	{
 		player.Movement.Stop();
-		//talkManager.Talk(questManager.curQuestNum, obj);
 		TalkUI.Instance.Talk(questManager.curQuestNum, obj);
 	}
 
@@ -18,6 +20,7 @@ public class GameManager : Singleton<GameManager>
 	// Event Handlers -------------------------------------------------------------------------------
 	private void Player_OnInteraction(Player player, ObjectData obj)
 	{
+		Debug.Log("Player_OnInteraction");
 		player.Movement.Stop();
 		TalkUI.Instance.Talk(questManager.curQuestNum, obj);
 	}
@@ -34,13 +37,15 @@ public class GameManager : Singleton<GameManager>
 		// 2022.02.22 by veramocor
 		player = FindObjectOfType<Player>();
 	}
-	private void OnEnable()
+
+	private void OnEnable()//오브젝트가 활성화될 경우 자동으로 호출
 	{
-		player.OnInteraction += Player_OnInteraction;
+		player.OnInteraction += Player_OnInteraction;//+= 로 이벤트 핸들러를 이벤트에 추가.  (Player_OnInteraction() 이 실행되는 것은 아님)
 	}
-	private void OnDisable()
+
+	private void OnDisable()//오브젝트가 비활성화될 경우 자동으로 호출
 	{
-		player.OnInteraction -= Player_OnInteraction;
+		player.OnInteraction -= Player_OnInteraction;//-= 러 이벤트 핸들러를 이벤트에 추가
 	}
 
 	

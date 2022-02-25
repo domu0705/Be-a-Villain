@@ -1,4 +1,3 @@
-using BAV.Common;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,10 +35,12 @@ public class TalkUI : MonoBehaviour
     {
         talkText.text = dialogue;
     }
+
     private void showPanel()
     {
         talkPanel.anchoredPosition = Vector3.zero;
     }
+
     private void hidePanel()
     {
         talkPanel.anchoredPosition = Vector3.down * 500;// new Vector3(0, -500,0);

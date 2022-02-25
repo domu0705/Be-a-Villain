@@ -89,7 +89,7 @@ public class Shop : MonoBehaviour
 		{
 			if (HasEnughCoin(healthItem) && !player.IsPowerFull)
 			{
-				player.ChangeCoin(-healthItem.price);
+				//player.ChangeCoin(-healthItem.price);
 				player.ChangeHealth(healthItem.value);
 			}
 		}
@@ -97,7 +97,7 @@ public class Shop : MonoBehaviour
 		{
 			if (HasEnughCoin(swordItem))
 			{
-				player.ChangeCoin(-swordItem.price);
+				//player.ChangeCoin(-swordItem.price);
 				player.ChangeSword();
 			}
 		}
