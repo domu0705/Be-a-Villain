@@ -7,6 +7,16 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 	// Properties -----------------------------------------------------------------------------------
+	[Header("Player MaxPower")]
+	[SerializeField] private float maxHealth = 100;
+	[SerializeField] private float maxSword = 10;
+	[SerializeField] private float maxShield = 10;
+	[Header("Player Info")]
+	[SerializeField] private int coin = 0;
+	[SerializeField] private float curHealth = 100;
+	[SerializeField] private float curSwordPower = 5;
+	[SerializeField] private float curShieldPower = 2;
+
 	public PlayerMovement Movement => playerMovement;
 	public bool IsPowerFull => curHealth >= maxHealth;
 	public bool IsShieldFull => curShieldPower >= maxShield;
@@ -18,9 +28,16 @@ public class Player : MonoBehaviour
 	{
 		playerMovement.canMove = true;
 	}
+
 	public void StopPlayer()
 	{
 		playerMovement.canMove = false;
+	}
+
+	public void ChangeCoin(int newCoin)
+	{
+		coin += newCoin;
+		HudUI.Instance.UpdateCoin(coin);
 	}
 
 	public void ChangeHealth(int val)
@@ -29,15 +46,14 @@ public class Player : MonoBehaviour
 		if (curHealth > maxHealth)
 			curHealth = maxHealth;
 
-		//HudUI.Instance.HealthBar.localScale = new Vector3((float)curHealth / maxHealth, 1, 1);
-		//healthBar.localScale = new Vector3((float)curHealth / maxHealth, 1, 1);
+		HudUI.Instance.UpdateHealth(curHealth , maxHealth);
 	}
+
 	public void ChangeSword()
 	{
 		//무기 바꿔들기
 		if (swordNum >= 0)//이전에 들고있던 무기가 있다면 없애기
 		{
-			Debug.Log("swordNum=" + swordNum);
 			swordAry[swordNum].SetActive(false);
 		}
 		swordNum++;
@@ -46,16 +62,17 @@ public class Player : MonoBehaviour
 		//공격력 증가
 		Item newSword = swordAry[swordNum].GetComponent<Item>();
 		curSwordPower = newSword.value;
-		//swordBar.localScale = new Vector3((float)curSwordPower / maxSword, 1, 1);
+		HudUI.Instance.UpdateSword(curSwordPower, maxSword);
 	}
+
 	public void ChangeShield(int val)
 	{
 		curShieldPower += val;
 		if (curShieldPower > maxShield)
 			curShieldPower = maxShield;
-
-		//shieldBar.localScale = new Vector3((float)curShieldPower / maxShield, 1, 1);
+		HudUI.Instance.UpdateShield(curShieldPower, maxShield);
 	}
+
 
 	// Events ---------------------------------------------------------------------------------------
 	public event Action<Player, ObjectData> OnInteraction;
@@ -63,7 +80,6 @@ public class Player : MonoBehaviour
 
 
 	// Fields : caching -----------------------------------------------------------------------------
-	private Camera cam;
 	private Animator anim;
 	private Rigidbody rigid;
 	private PlayerMovement playerMovement;
@@ -88,18 +104,15 @@ public class Player : MonoBehaviour
 			}
 		}
 	}
+
 	private void attack()
 	{
-		if (leftMouseDown)
+		if (leftMouseDown && playerMovement.canMove)
 		{
 			anim.SetTrigger("doSwing");
 		}
 	}
-	private void updateBarUI()
-	{
-		//HudUI.Instance.UpdateHealth(curHealth, maxHealth);
-		//healthBar.localScale = new Vector3((float)curHealth / maxHealth, 1, 1);
-	}
+
 	private void getInput()
 	{
 		eDown = Input.GetKeyDown("e");// KeyCode.E);
@@ -107,21 +120,10 @@ public class Player : MonoBehaviour
 												  //rightMouseDown = Input.GetButtonDown("Fire2");//마우스 우클릭
 	}
 
-
-
 	// Unity Inspectors -----------------------------------------------------------------------------
 	[SerializeField]
 	private GameObject nearObj;//상호작용 가능한 object
-	[Header("Player Power")]
-	[SerializeField] private float maxHealth = 100;
-	[SerializeField] private int maxSword = 10;
-	[SerializeField] private int maxShield = 10;
-	[Header("Player Info")]
 	[SerializeField] private int swordNum = -1; //무기 없는상태(-1)에서 시작
-	[SerializeField] private int coin = 0;
-	[SerializeField] private float curHealth = 100;
-	[SerializeField] private float curSwordPower = 5;
-	[SerializeField] private float curShieldPower = 2;
 	[SerializeField] private bool isDead = false;
 	[Header("Other Input")]
 	[SerializeField] private bool eDown;
@@ -138,7 +140,11 @@ public class Player : MonoBehaviour
 		rigid = GetComponent<Rigidbody>();
 		playerMovement = GetComponent<PlayerMovement>();
 
-		cam = Camera.main;
+		/*Initialize HUD UI*/
+		HudUI.Instance.UpdateCoin(coin);
+		HudUI.Instance.UpdateHealth(curHealth, maxHealth);
+		HudUI.Instance.UpdateSword(curSwordPower,maxSword);
+		HudUI.Instance.UpdateShield(curShieldPower,maxShield);
 	}
 
 	private void Start()
@@ -160,7 +166,7 @@ public class Player : MonoBehaviour
 
 	private void LateUpdate()
 	{
-		updateBarUI();
+
 	}
 
 	private void OnCollisionEnter(Collision collision)
@@ -172,9 +178,9 @@ public class Player : MonoBehaviour
 	{
 		if ((other.tag == "Coin") && (!isDead))
 		{
-			Debug.Log("getcoin()");
 			Coin coinScript = other.GetComponent<Coin>();
-			//ChangeCoin(coinScript.value + coin);
+			Debug.Log("coinScript.value =" + coinScript.value + " coin=" + coin);
+			ChangeCoin(coinScript.value);
 			Destroy(other.gameObject);
 		}
 	}

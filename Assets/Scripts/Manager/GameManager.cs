@@ -4,7 +4,7 @@ public class GameManager : Singleton<GameManager>
 {
 	// Properties -----------------------------------------------------------------------------------
 	public Player Player => player;
-
+	public HudUI HUDUI => hudUI;
 	// Methods --------------------------------------------------------------------------------------
 	public void Action(ObjectData obj)
 	{
@@ -16,11 +16,12 @@ public class GameManager : Singleton<GameManager>
 
 	// Fields : caching -----------------------------------------------------------------------------
 	private Player player;
+	private HudUI hudUI;
+	// Fields ---------------------------------------------------------------------------------------
 
 	// Event Handlers -------------------------------------------------------------------------------
 	private void Player_OnInteraction(Player player, ObjectData obj)
 	{
-		Debug.Log("Player_OnInteraction");
 		player.Movement.Stop();
 		TalkUI.Instance.Talk(questManager.curQuestNum, obj);
 	}
@@ -32,11 +33,10 @@ public class GameManager : Singleton<GameManager>
 	// Unity Messages -------------------------------------------------------------------------------
 	private void Awake()
 	{
-		// player가 1개이고, GameManager 생성전에 이미 존재할 경우만 가능
-		// 다른 대안으로 PlayerManager를 따로 둘 수도 있고, GameManager가 생성시킬 수도 있음
-		// 2022.02.22 by veramocor
 		player = FindObjectOfType<Player>();
 	}
+
+	
 
 	private void OnEnable()//오브젝트가 활성화될 경우 자동으로 호출
 	{

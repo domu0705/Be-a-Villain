@@ -5,41 +5,7 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-	/*UI*/
-	public RectTransform shopUI;
-	public GameObject[] ItemAry;
-	public Text npcText;
-	public Text healthName;
-	public Text healthCost;
-	public Text swordName;
-	public Text swordCost;
-	public Text shieldName;
-	public Text shieldCost;
-
-	Player player;
-
-	[Header("Current Item Info")]
-	[SerializeField]
-	int curSwordNum = 0;//판매중인 무기 번호
-
-
-	[Header("All Item Info")]
-	public Item healthItem;
-	public Item swordItem;
-	public Item shieldItem;
-	public GameObject[] swordAry;
-	public int maxSwordNum = 5;
-
-	[Header("Shop NPC Dialogue")]
-	[TextArea]
-	public string hiText;
-	[TextArea]
-	public string coinLackText;
-	[TextArea]
-	public string buyItemText;
-	[TextArea]
-	public string middleText;//물건 고르다가 말 때 나오는 대사
-
+	// Methods --------------------------------------------------------------------------------------
 	public void Enter(Player curPlayer)
 	{
 		player = curPlayer;
@@ -50,6 +16,67 @@ public class Shop : MonoBehaviour
 		PrepareItem();
 	}
 
+	public void Exit()
+	{
+		shopUI.anchoredPosition = Vector3.down * 1000;
+		player.ResumePlayer();
+		player = null;
+	}
+
+	public void ShowItemInfo(int btnIndex) //마우스 커서 오버 시(위에 올라와있을 때) 호출됨   
+	{
+		if (btnIndex == 1)
+		{
+			npcText.text = healthItem.info;
+		}
+		else if (btnIndex == 2)
+		{
+			npcText.text = swordItem.info;
+		}
+		else if (btnIndex == 3)
+		{
+			npcText.text = shieldItem.info;
+		}
+	}
+
+	public void CloseItemInfo() //마우스 커서 오버 시(위에 올라와있을 때) 호출됨   
+	{
+		npcText.text = middleText;
+	}
+
+	public void Buy(int btnIndex)
+	{
+		if (btnIndex == 1)
+		{
+			if (HasEnughCoin(healthItem) && !player.IsPowerFull)
+			{
+				player.ChangeCoin(-healthItem.price);
+				player.ChangeHealth(healthItem.value);
+			}
+		}
+		else if (btnIndex == 2)
+		{
+			if (HasEnughCoin(swordItem))
+			{
+				player.ChangeCoin(-swordItem.price);
+				player.ChangeSword();
+			}
+		}
+		else if (btnIndex == 3)
+		{
+			if (HasEnughCoin(shieldItem) && !player.IsShieldFull)
+			{
+				player.ChangeCoin(-shieldItem.price);
+				player.ChangeShield(shieldItem.value);
+			}
+		}
+
+		PrepareItem();
+	}
+
+	// Fields ---------------------------------------------------------------------------------------
+	Player player;
+	// Functions ------------------------------------------------------------------------------------
 	void PrepareItem()
 	{
 		//플레이어의 무기에 따라 다음 무기를 보여줌
@@ -78,41 +105,11 @@ public class Shop : MonoBehaviour
 		ItemAry[0].SetActive(!player.IsPowerFull);
 
 		/*  방어력 다 차면 방어력 아이템 삭제 */
-		if (player.IsShieldFull)
-			ItemAry[2].SetActive(false);
+		ItemAry[2].SetActive(!player.IsShieldFull);
 
 	}
 
-	public void Buy(int btnIndex)
-	{
-		if (btnIndex == 1)
-		{
-			if (HasEnughCoin(healthItem) && !player.IsPowerFull)
-			{
-				//player.ChangeCoin(-healthItem.price);
-				player.ChangeHealth(healthItem.value);
-			}
-		}
-		else if (btnIndex == 2)
-		{
-			if (HasEnughCoin(swordItem))
-			{
-				//player.ChangeCoin(-swordItem.price);
-				player.ChangeSword();
-			}
-		}
-		else if (btnIndex == 3)
-		{
-			if (HasEnughCoin(shieldItem) && !player.IsShieldFull)
-			{
-				player.ChangeShield(shieldItem.value);
-			}
-		}
-
-		PrepareItem();
-	}
-
-	bool HasEnughCoin(Item item)
+	private bool HasEnughCoin(Item item)
 	{
 		if (player.Coin < item.price)
 		{
@@ -124,31 +121,50 @@ public class Shop : MonoBehaviour
 		return true;
 	}
 
-	public void ShowItemInfo(int btnIndex) //마우스 커서 오버 시(위에 올라와있을 때) 호출됨   
-	{
-		if (btnIndex == 1)
-		{
-			npcText.text = healthItem.info;
-		}
-		else if (btnIndex == 2)
-		{
-			npcText.text = swordItem.info;
-		}
-		else if (btnIndex == 3)
-		{
-			npcText.text = shieldItem.info;
-		}
-	}
 
-	public void CloseItemInfo() //마우스 커서 오버 시(위에 올라와있을 때) 호출됨   
-	{
-		npcText.text = middleText;
-	}
+	// Unity Inspectors -----------------------------------------------------------------------------
+	[Header("UI")]
+	public RectTransform shopUI;
+	public GameObject[] ItemAry;
+	public Text npcText;
+	public Text healthName;
+	public Text healthCost;
+	public Text swordName;
+	public Text swordCost;
+	public Text shieldName;
+	public Text shieldCost;
 
-	public void Exit()
+	[Header("Current Item Info")]
+	[SerializeField]
+	int curSwordNum = 0;//판매중인 무기 번호
+
+
+	[Header("All Item Info")]
+	public Item healthItem;
+	public Item swordItem;
+	public Item shieldItem;
+	public GameObject[] swordAry;
+	public int maxSwordNum = 5;
+
+	[Header("Shop NPC Dialogue")]
+	[TextArea]
+	public string hiText;
+	[TextArea]
+	public string coinLackText;
+	[TextArea]
+	public string buyItemText;
+	[TextArea]
+	public string middleText;//물건 고르다가 말 때 나오는 대사
+
+	
+	// Unity Messages -------------------------------------------------------------------------------
+	private void Awake()
 	{
 		shopUI.anchoredPosition = Vector3.down * 1000;
-		player.ResumePlayer();
-		player = null;
+		
+	}
+	private void Start()
+	{
+
 	}
 }
