@@ -34,7 +34,9 @@ public class Shop : Zone
 			if (HasEnughCoin(healthItem) && !player.IsPowerFull)
 			{
 				player.ChangeCoin(-healthItem.price);
-				player.ChangeHealth(healthItem.value);
+				ItemAry[0].SetActive(false);
+				inventoryUI.TurnOnGunImg();
+				player.hasGun = true;
 			}
 		}
 		else if (btnIndex == 2)
@@ -42,7 +44,7 @@ public class Shop : Zone
 			if (HasEnughCoin(swordItem))
 			{
 				player.ChangeCoin(-swordItem.price);
-				player.ChangeSword();
+				player.ChangeSword(curSwordNum);
 			}
 		}
 		else if (btnIndex == 3)
@@ -59,10 +61,12 @@ public class Shop : Zone
 	}
 
 	// Fields ---------------------------------------------------------------------------------------
-	//Player player;
+	InventoryUI inventoryUI;
+
 	// Functions ------------------------------------------------------------------------------------
 	protected override void Prepare()
 	{
+		Debug.Log("준비");
 		//플레이어의 무기에 따라 다음 무기를 보여줌
 		curSwordNum = player.SwordNum + 1;
 
@@ -80,13 +84,10 @@ public class Shop : Zone
 	private void EraseItem()
 	{
 		/* 마지막 무기 사면 무기 아이템 삭제 */
-		if (curSwordNum > maxSwordNum)
+		if (curSwordNum >= swordAry.Length)
 			ItemAry[1].SetActive(false);
 		else
 			swordItem = swordAry[curSwordNum].GetComponent<Item>();
-
-		/* 체력 다 차면 체력 아이템 삭제 */
-		ItemAry[0].SetActive(!player.IsPowerFull);
 
 		/*  방어력 다 차면 방어력 아이템 삭제 */
 		ItemAry[2].SetActive(!player.IsShieldFull);
@@ -127,7 +128,7 @@ public class Shop : Zone
 	public Item swordItem;
 	public Item shieldItem;
 	public GameObject[] swordAry;
-	public int maxSwordNum = 5;
+	public int maxSwordNum = 7;
 
 	[Header("NPC Dialogue")]
 	//[TextArea]
@@ -143,6 +144,8 @@ public class Shop : Zone
 	// Unity Messages -------------------------------------------------------------------------------
 	private void Awake()
 	{
+		inventoryUI = InventoryUI.Instance;
+
 		zoneUI.anchoredPosition = Vector3.down * 1000;
 		
 	}

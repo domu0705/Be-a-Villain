@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class Zone : MonoBehaviour
+public class InventoryUI : Singleton<InventoryUI>
 {
 	// ----------------------------------------------------------------------------------------------
 
@@ -11,23 +11,28 @@ public class Zone : MonoBehaviour
 
 	// Definitions ----------------------------------------------------------------------------------
 	// Properties -----------------------------------------------------------------------------------
+	int maxSwordNum = 5;
 	// Methods --------------------------------------------------------------------------------------
-	public void Enter(Player curPlayer)
-	{
-		player = curPlayer;
-		player.Movement.Stop();
-		zoneUI.anchoredPosition = Vector3.zero; //UI가 화면 정중앙에 오게 함.
-		npcText.text = startText;
-
-		Prepare();
+	public void CheckSwordUI()
+    {
+		swordShadeImg.SetActive(false);
+		gunShadeImg.SetActive(true);
 	}
 
-	public void Exit()
+	public void CheckGunUI()
 	{
-		player.Movement.canMove = true;
-		zoneUI.anchoredPosition = Vector3.down * 1000;
-		player.ResumePlayer();
-		player = null;
+		swordShadeImg.SetActive(true);
+		gunShadeImg.SetActive(false);
+	}
+
+	public void TurnOnSwordImg()
+	{
+		swordImg.SetActive(true);
+	}
+
+	public void TurnOnGunImg()
+    {
+		gunImg.SetActive(true);
 	}
 
 	// Events ---------------------------------------------------------------------------------------
@@ -36,30 +41,32 @@ public class Zone : MonoBehaviour
 
 	// Fields : caching -----------------------------------------------------------------------------
 	// Fields ---------------------------------------------------------------------------------------
-	protected Player player;
 	// Functions ------------------------------------------------------------------------------------
-
-	protected virtual void Prepare()//ENter함수 호출 시 호출됨.
-	{
-
-	}
-
 	// Event Handlers -------------------------------------------------------------------------------
 	// Overrides ------------------------------------------------------------------------------------
 
 
 
 	// Unity Inspectors -----------------------------------------------------------------------------
-	[Header("Zone UI")]
-	public RectTransform zoneUI;
-	public Text npcText;
-
-	[Header("Zone NPC Dialogue")]
-	[TextArea]
-	public string startText;
+	[Header("Inventory UI")]
+	public GameObject swordImg;
+	public GameObject gunImg;
+	public GameObject swordShadeImg;
+	public GameObject gunShadeImg;
 
 	// Unity Messages -------------------------------------------------------------------------------
+	private void Awake()
+	{
+		swordImg.SetActive(false);
+		gunImg.SetActive(false);
+		swordShadeImg.SetActive(true);
+		gunShadeImg.SetActive(true);
+	}
 
+	private void Start()
+	{
+		
+	}
 
 	// Unity Coroutine ------------------------------------------------------------------------------
 }
