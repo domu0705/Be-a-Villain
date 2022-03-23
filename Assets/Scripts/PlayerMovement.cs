@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-    // Properties -----------------------------------------------------------------------------------
+    // Outer Properties -----------------------------------------------------------------------------
     public bool canMove = true;
 
-    // Methods --------------------------------------------------------------------------------------
+    // Outer Functions ------------------------------------------------------------------------------
 
     public void Stop()
     {
@@ -49,14 +48,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rigid.MovePosition(transform.position + moveVec * speed * Time.deltaTime);
             
-            /*
-            if (rigid.velocity.magnitude <= maxSpeed)
-            {
-                Debug.Log("rigid.velocity.magnitude=" + rigid.velocity.magnitude);
-                rigid.AddForce(localMoveVec * speed , ForceMode.Impulse);
-            }
-            */
-
             //animation
             isWalking = (moveVec != Vector3.zero);
             anim.SetBool("isWalking", isWalking);
@@ -148,7 +139,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Move();
         FreezeRotation();
-        //DetectBoundary();
         StopToWall();
     }
 

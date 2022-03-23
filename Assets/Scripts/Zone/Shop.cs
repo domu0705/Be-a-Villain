@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Shop : Zone
 {
-	// Methods --------------------------------------------------------------------------------------
+	// Outer Functions ------------------------------------------------------------------------------
 	public void ShowItemInfo(int btnIndex) //마우스 커서 오버 시(위에 올라와있을 때) 호출됨   
 	{
 		if (btnIndex == 1)

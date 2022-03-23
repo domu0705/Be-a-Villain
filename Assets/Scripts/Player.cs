@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    // Properties -----------------------------------------------------------------------------------
+    // Outer Properties -----------------------------------------------------------------------------
     [Header("Player MaxPower")]
     [SerializeField] private float maxHealth = 100;
     [SerializeField] private float maxSword = 10;
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     public int SwordNum => swordNum;
     public bool hasGun = false;
 
-    // Methods --------------------------------------------------------------------------------------
+    // Outer Functions ------------------------------------------------------------------------------
     public void ResumePlayer()
     {
         playerMovement.canMove = true;
@@ -51,13 +51,22 @@ public class Player : MonoBehaviour
         hudUI.UpdateHealth(curHealth, maxHealth);
     }
 
-    public void ChangeSword(int newSwordNum)
+    public void ChangeSword(int newSwordNum) //무기 바꿔들기
     {
-        //무기 바꿔들기
-        if (swordNum == 0)//첫 검 구입이라면
+        if (swordNum == 0) // 첫 검 구입이라면
         {
             inventoryUI.TurnOnSwordImg();
         }
+        else if(equipWeapon && equipWeapon.type == Item.Type.Sword)// 무기를 들고있다면 object 업데이트 하기
+        {
+
+            swordAry[swordNum].SetActive(false);
+            swordAry[newSwordNum].SetActive(true);
+            
+            Item weapon = swordAry[newSwordNum].GetComponent<Item>();
+            equipWeapon = weapon;
+        }
+
         swordNum = newSwordNum;
     }
 
@@ -117,7 +126,7 @@ public class Player : MonoBehaviour
     // Fields ---------------------------------------------------------------------------------------
     private InventoryUI inventoryUI;
     private HudUI hudUI;
-    private Item equipWeapon;
+    [SerializeField]private Item equipWeapon;
     private float weaponDelay;
     private bool weaponDelayEnd;
 
@@ -249,6 +258,8 @@ public class Player : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (!nearObj) return;
+
         if ((nearObj.tag == "Shop") || (nearObj.tag == "Object"))
         {
             nearObj = null;
