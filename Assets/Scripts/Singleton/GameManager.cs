@@ -4,7 +4,6 @@ public class GameManager : Singleton<GameManager>
 {
 	// Properties -----------------------------------------------------------------------------------
 	public Player Player => player;
-	public HudUI HUDUI => hudUI;
 	// Outer Functions ------------------------------------------------------------------------------
 	/*	public void Action(ObjectData obj)
 		{
@@ -16,7 +15,7 @@ public class GameManager : Singleton<GameManager>
 
 	// Fields : caching -----------------------------------------------------------------------------
 	private Player player;
-	private HudUI hudUI;
+
 	// Fields ---------------------------------------------------------------------------------------
 
 	// Event Handlers -------------------------------------------------------------------------------

@@ -26,8 +26,8 @@ public class Item : MonoBehaviour
         }
         if (type == Type.Gun)
         {
-            //StopCoroutine("Shot");
-            //StartCoroutine("Shot");
+            StopCoroutine("Shot");
+            StartCoroutine("Shot");
         }
     }
 
@@ -54,14 +54,19 @@ public class Item : MonoBehaviour
     IEnumerator Shot()
     {
         yield return new WaitForSeconds(0.1f);
+
+        Bullet bullet = ObjectManager.Instance.GetBullet();
+        bullet.ShootBulletFrom(bulletPos);
+
     }
 
 
     // Unity Inspectors -----------------------------------------------------------------------------
     public TrailRenderer moveEffect;//무기 휘두를 때 효과
+    public Transform bulletPos;
 
     // Unity Messages -------------------------------------------------------------------------------
-	private void Awake()
+    private void Awake()
 	{
         if (type == Type.Sword)
         {

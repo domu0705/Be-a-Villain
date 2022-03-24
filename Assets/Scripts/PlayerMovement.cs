@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isWalking;
     private Vector3 moveVec;
     private bool inBoundary;//벽 뚫기 방지
-    private float maxSpeed = 20;
+
     // Camera
     private bool lockCameraRot;
     private float smoothness = 10f;

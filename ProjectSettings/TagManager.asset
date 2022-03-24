@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - Object
   - NPC
+  - Boundary
   layers:
   - Default
   - TransparentFX
