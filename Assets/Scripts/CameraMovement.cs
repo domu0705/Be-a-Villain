@@ -16,18 +16,17 @@ public class CameraMovement : MonoBehaviour
     public Transform realCamera;
     public Vector3 dirNormalized;
     public Vector3 finalDir;
-    public float minDistance;//카메라와 palyer사이의 거리
-    public float maxDistance;//카메라와 palyer사이의 거리
+    public float minDistance;//카메라와 player 사이의 거리
+    public float maxDistance;//카메라와 player 사이의 거리
     public float finalDistance;
     public float smoothness = 10f;
     
-    // Start is called before the first frame update
     void Start()
     {
-        rotX = transform.localRotation.eulerAngles.x;//localrotation:부모를 기준으로 상대적인 회전 각도를 나타냄
-        rotY = transform.localRotation.eulerAngles.y;
+        rotX = transform.eulerAngles.x;
+        rotY = transform.eulerAngles.y;
 
-        dirNormalized = realCamera.localPosition.normalized;
+        dirNormalized = realCamera.localPosition.normalized; //localPosition: 현재 오브젝트를 기준점으로 자식 카메라의 position
         finalDistance = realCamera.localPosition.magnitude;
 
         //마우스 커서 없애기
@@ -35,7 +34,6 @@ public class CameraMovement : MonoBehaviour
         //Cursor.visible = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (playerMovement.canMove)
@@ -55,13 +53,10 @@ public class CameraMovement : MonoBehaviour
     //update()끝난뒤에 실행
     private void LateUpdate()
     {
-        if (playerMovement.canMove)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, objectToFollow.position, followSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, objectToFollow.position, followSpeed);
+        finalDir = transform.TransformPoint(dirNormalized * maxDistance);//TransformPoint:로컬좌표를 글로벌로 변환
 
-            finalDir = transform.TransformPoint(dirNormalized * maxDistance);//TransformPoint:로컬좌표를 글로벌로 변환
-
-
+        if (playerMovement.canMove && playerMovement.curCamNum == 1){
             //장애물에 카메라 닿을 때 카메라 옮기기
             RaycastHit hit;
             //부딛혔다면
@@ -73,8 +68,8 @@ public class CameraMovement : MonoBehaviour
             {
                 finalDistance = maxDistance;
             }
-
-            realCamera.localPosition = Vector3.Lerp(realCamera.localPosition, dirNormalized * finalDistance, Time.deltaTime * smoothness);
         }
+
+        realCamera.localPosition = Vector3.Lerp(realCamera.localPosition, dirNormalized * finalDistance, Time.deltaTime * smoothness);
     }
 }

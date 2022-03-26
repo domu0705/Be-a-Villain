@@ -58,6 +58,7 @@ public class Item : MonoBehaviour
         Bullet bullet = ObjectManager.Instance.GetBullet();
         bullet.ShootBulletFrom(bulletPos);
 
+
     }
 
 

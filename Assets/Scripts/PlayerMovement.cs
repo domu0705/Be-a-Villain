@@ -17,8 +17,14 @@ public class PlayerMovement : MonoBehaviour
         anim.SetTrigger("doIdle");
     }
 
-    // Fields ---------------------------------------------------------------------------------------
-    Camera cam;
+    public void ChangeCamTo(int num)
+    {
+        camAry[curCamNum].enabled = false;
+        curCamNum = num;
+        camAry[curCamNum].enabled = true;
+    }
+
+    // Inner Properties -----------------------------------------------------------------------------
     Animator anim;
     Rigidbody rigid;
 
@@ -34,9 +40,9 @@ public class PlayerMovement : MonoBehaviour
     // Camera
     private bool lockCameraRot;
     private float smoothness = 10f;
+    public int curCamNum = 1;
 
-
-    // Functions ------------------------------------------------------------------------------------
+    // Inner Functions ------------------------------------------------------------------------------
     private void Move()
     {
         Vector3 foward = transform.forward;//transform.forward는 로컬좌표로 플레이어의 앞 벡터를 반환
@@ -81,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canMove && !lockCameraRot)
         {
-            Vector3 playerRotate = Vector3.Scale(cam.transform.forward, new Vector3(1, 0, 1));
+            Vector3 playerRotate = Vector3.Scale(camAry[curCamNum].transform.forward, new Vector3(1, 0, 1));
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(playerRotate), Time.deltaTime * smoothness);
         }
     }
@@ -109,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     // Unity Inspectors -----------------------------------------------------------------------------
+    [SerializeField] private Camera[] camAry;
     [Header("Movement")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
@@ -119,7 +126,6 @@ public class PlayerMovement : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody>();
-        cam = Camera.main;
 
         onGround = true;
     }

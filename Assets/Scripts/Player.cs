@@ -76,11 +76,15 @@ public class Player : MonoBehaviour
 
         if (pressOne && swordNum > 0)
         {
+            /*시점 변경*/
+            playerMovement.ChangeCamTo(1);
+
+            /*무기 변경*/
             ChangeSword(swordNum);
             swordAry[swordNum].SetActive(true);
             gun.SetActive(false);
 
-            /*공격력 증가*/
+            /*공격력 변경*/
             weapon = swordAry[swordNum].GetComponent<Item>();
             curSwordPower = weapon.value;
             hudUI.UpdateSword(curSwordPower, maxSword);
@@ -90,10 +94,14 @@ public class Player : MonoBehaviour
         }
         else if (pressTwo && hasGun)
         {
+            /*시점 변경*/
+            playerMovement.ChangeCamTo(0);
+
+            /*무기 변경*/
             swordAry[swordNum].SetActive(false);
             gun.SetActive(true);
 
-            /*공격력 증가*/
+            /*공격력 변경*/
             weapon = gun.GetComponent<Item>();
             curSwordPower = weapon.value;
             hudUI.UpdateSword(curSwordPower, maxSword);
