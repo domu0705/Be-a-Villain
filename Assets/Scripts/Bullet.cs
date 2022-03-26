@@ -14,6 +14,7 @@ public class Bullet : MonoBehaviour
 		gameObject.transform.position = initialPos.position;
 		gameObject.SetActive(true);
 
+		//Vector3 shootDir = 
 		Rigidbody bulletRigid = gameObject.GetComponent<Rigidbody>();
 		bulletRigid.velocity = initialPos.transform.forward * 50;//총알이 나가야하니까 속도를 붙여줌
 	}

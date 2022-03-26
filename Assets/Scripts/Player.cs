@@ -77,7 +77,8 @@ public class Player : MonoBehaviour
         if (pressOne && swordNum > 0)
         {
             /*시점 변경*/
-            playerMovement.ChangeCamTo(1);
+            //playerMovement.ChangeCamTo(1);
+            OnCamChange?.Invoke(1);
 
             /*무기 변경*/
             ChangeSword(swordNum);
@@ -95,7 +96,8 @@ public class Player : MonoBehaviour
         else if (pressTwo && hasGun)
         {
             /*시점 변경*/
-            playerMovement.ChangeCamTo(0);
+            //playerMovement.ChangeCamTo(0);
+            OnCamChange?.Invoke(0);
 
             /*무기 변경*/
             swordAry[swordNum].SetActive(false);
@@ -124,6 +126,7 @@ public class Player : MonoBehaviour
     //public event Action<Player, ObjectData> OnInteraction;
     public Action<Player, ObjectData> OnInteraction;
     public Action<Player, Item> OnAttack;
+    public Action<int> OnCamChange;
 
 
     // Fields : caching -----------------------------------------------------------------------------

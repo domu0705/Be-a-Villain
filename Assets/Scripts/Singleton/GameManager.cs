@@ -4,6 +4,7 @@ public class GameManager : Singleton<GameManager>
 {
 	// Properties -----------------------------------------------------------------------------------
 	public Player Player => player;
+
 	// Outer Functions ------------------------------------------------------------------------------
 	/*	public void Action(ObjectData obj)
 		{
@@ -38,8 +39,14 @@ public class GameManager : Singleton<GameManager>
 		}*/
 	}
 
+	private void Player_CamChange(int camNum)
+    {
+		cameraMovement.ChangeCamTo(camNum);
+    }
+
 	// Unity Inspectors -----------------------------------------------------------------------------
 	public QuestManager questManager;
+	public CameraMovement cameraMovement;
 
 	// Unity Messages -------------------------------------------------------------------------------
 	private void Awake()
@@ -53,12 +60,14 @@ public class GameManager : Singleton<GameManager>
 	{
 		player.OnInteraction += Player_OnInteraction;//+= 로 이벤트 핸들러를 이벤트에 추가.  (Player_OnInteraction() 이 실행되는 것은 아님)
 		player.OnAttack += Player_Attack;
+		player.OnCamChange += Player_CamChange;
 	}
 
 	private void OnDisable()//오브젝트가 비활성화될 경우 자동으로 호출
 	{
 		player.OnInteraction -= Player_OnInteraction;//-= 러 이벤트 핸들러를 이벤트에 추가
 		player.OnAttack -= Player_Attack;
+		player.OnCamChange -= Player_CamChange;
 	}
 
 	

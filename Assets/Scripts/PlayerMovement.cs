@@ -17,14 +17,8 @@ public class PlayerMovement : MonoBehaviour
         anim.SetTrigger("doIdle");
     }
 
-    public void ChangeCamTo(int num)
-    {
-        camAry[curCamNum].enabled = false;
-        curCamNum = num;
-        camAry[curCamNum].enabled = true;
-    }
-
     // Inner Properties -----------------------------------------------------------------------------
+    CameraMovement cameraMovement;
     Animator anim;
     Rigidbody rigid;
 
@@ -40,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
     // Camera
     private bool lockCameraRot;
     private float smoothness = 10f;
-    public int curCamNum = 1;
 
     // Inner Functions ------------------------------------------------------------------------------
     private void Move()
@@ -87,7 +80,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canMove && !lockCameraRot)
         {
-            Vector3 playerRotate = Vector3.Scale(camAry[curCamNum].transform.forward, new Vector3(1, 0, 1));
+            Camera camera = cameraMovement.GetCurrentCamera();
+            Vector3 playerRotate = Vector3.Scale(camera.transform.forward, new Vector3(1, 0, 1));
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(playerRotate), Time.deltaTime * smoothness);
         }
     }
@@ -115,7 +109,6 @@ public class PlayerMovement : MonoBehaviour
 
 
     // Unity Inspectors -----------------------------------------------------------------------------
-    [SerializeField] private Camera[] camAry;
     [Header("Movement")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
@@ -124,6 +117,8 @@ public class PlayerMovement : MonoBehaviour
     // Unity Messages -------------------------------------------------------------------------------
     void Awake()
     {
+        cameraMovement = GameManager.Instance.cameraMovement;
+
         anim = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody>();
 

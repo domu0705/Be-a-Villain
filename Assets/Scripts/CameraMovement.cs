@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    // Outer Properties -----------------------------------------------------------------------------
+    public Camera[] camAry;
+
+    // Outer Functions ------------------------------------------------------------------------------
     public PlayerMovement playerMovement;
-    public Transform objectToFollow;
     public float followSpeed = 10f;
     public float sensitivity = 100f;//감도
     public float clampAngle = 70f; //상하 각도 제한
@@ -20,7 +23,48 @@ public class CameraMovement : MonoBehaviour
     public float maxDistance;//카메라와 player 사이의 거리
     public float finalDistance;
     public float smoothness = 10f;
-    
+
+
+    public void ChangeCamTo(int num)
+    {
+        camAry[curCamNum].enabled = false;
+        curCamNum = num;
+        camAry[curCamNum].enabled = true;
+
+
+        /*if (num == 0)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }*/
+    }
+
+    public Camera GetCurrentCamera()
+    {
+        return camAry[curCamNum];
+    }
+
+    // Properties : caching -------------------------------------------------------------------------
+
+    // Inner Properties -----------------------------------------------------------------------------
+    private int curCamNum = 1;
+
+    // Inner Functions ------------------------------------------------------------------------------
+
+    // Unity Inspectors -----------------------------------------------------------------------------
+    public Transform objectToFollow;
+
+    // Unity Messages -------------------------------------------------------------------------------
+    private void Awake()
+    {
+
+    }
+
     void Start()
     {
         rotX = transform.eulerAngles.x;
@@ -56,7 +100,7 @@ public class CameraMovement : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, objectToFollow.position, followSpeed);
         finalDir = transform.TransformPoint(dirNormalized * maxDistance);//TransformPoint:로컬좌표를 글로벌로 변환
 
-        if (playerMovement.canMove && playerMovement.curCamNum == 1){
+        if (playerMovement.canMove && curCamNum == 1){
             //장애물에 카메라 닿을 때 카메라 옮기기
             RaycastHit hit;
             //부딛혔다면
@@ -68,8 +112,7 @@ public class CameraMovement : MonoBehaviour
             {
                 finalDistance = maxDistance;
             }
+            realCamera.localPosition = Vector3.Lerp(realCamera.localPosition, dirNormalized * finalDistance, Time.deltaTime * smoothness);
         }
-
-        realCamera.localPosition = Vector3.Lerp(realCamera.localPosition, dirNormalized * finalDistance, Time.deltaTime * smoothness);
     }
 }
