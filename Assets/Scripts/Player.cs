@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public bool IsShieldFull => curShieldPower >= maxShield;
     public float Coin => coin;
     public int SwordNum => swordNum;
-    public bool hasGun = false;
+    public bool hasGun = true;
 
     // Outer Functions ------------------------------------------------------------------------------
     public void ResumePlayer()
@@ -134,12 +134,13 @@ public class Player : MonoBehaviour
     private Rigidbody rigid;
     private PlayerMovement playerMovement;
 
-    // Fields ---------------------------------------------------------------------------------------
+    // Inner Properties -----------------------------------------------------------------------------
     private InventoryUI inventoryUI;
     private HudUI hudUI;
     [SerializeField]private Item equipWeapon;
     private float weaponDelay;
     private bool weaponDelayEnd;
+    private bool canAttack; // 무기를 들 수 있는 scene인지 체크
 
     // Functions ------------------------------------------------------------------------------------
     private void interaction()
@@ -152,7 +153,13 @@ public class Player : MonoBehaviour
                 var shop = nearObj.GetComponent<Shop>();
                 shop.Enter(this);
             }
-
+            else if (nearObj.tag == "Teleporter") //상호작용 가능한 사물 or NPC
+            {
+                Debug.Log("Interaction | teleporter");
+                /*이벤트를 보내고, GameManager가 이벤트에 반응*/
+                var objScript = nearObj.GetComponent<Teleporter>();
+                objScript.Teleport();
+            }
             else if (nearObj.tag == "Object") //상호작용 가능한 사물 or NPC
             {
                 /*이벤트를 보내고, GameManager가 이벤트에 반응*/
@@ -209,8 +216,8 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         playerMovement = GetComponent<PlayerMovement>();
 
-        inventoryUI = InventoryUI.Instance;
-        hudUI = HudUI.Instance;
+        inventoryUI = GameManager.Instance.InventoryUI;
+        hudUI =  GameManager.Instance.HudUI;
 
         /*Initialize HUD UI*/
         hudUI.UpdateCoin(coin);
@@ -261,7 +268,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if ((other.tag == "Shop") || (other.tag == "Object"))
+        if ((other.tag == "Shop") || (other.tag == "Object") || (other.tag == "Teleporter"))
         {
             nearObj = other.gameObject;
         }
@@ -271,7 +278,7 @@ public class Player : MonoBehaviour
     {
         if (!nearObj) return;
 
-        if ((nearObj.tag == "Shop") || (nearObj.tag == "Object"))
+        if ((nearObj.tag == "Shop") || (nearObj.tag == "Object") || (other.tag == "Teleporter"))
         {
             nearObj = null;
         }

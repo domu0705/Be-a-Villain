@@ -26,7 +26,6 @@ public class Item : MonoBehaviour
         }
         if (type == Type.Gun)
         {
-            StopCoroutine("Shot");
             StartCoroutine("Shot");
         }
     }
@@ -53,12 +52,10 @@ public class Item : MonoBehaviour
 
     IEnumerator Shot()
     {
-        yield return new WaitForSeconds(0.1f);
-
+        //ÃÑ¾Ë 
         Bullet bullet = ObjectManager.Instance.GetBullet();
-        bullet.ShootBulletFrom(bulletPos);
-
-
+        bullet.ShootBullet();
+        yield return null;
     }
 
 
@@ -72,8 +69,6 @@ public class Item : MonoBehaviour
         if (type == Type.Sword)
         {
             collider = GetComponent<BoxCollider>();
-
-
 
             /*initial setting*/
             collider.enabled = false;

@@ -117,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
     // Unity Messages -------------------------------------------------------------------------------
     void Awake()
     {
-        cameraMovement = GameManager.Instance.cameraMovement;
+        cameraMovement = GameManager.Instance.CameraMovement;
 
         anim = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody>();

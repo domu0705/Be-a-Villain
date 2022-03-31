@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class HudUI : Singleton<HudUI>
+public class HudUI : MonoBehaviour// gameobject로 있는건 singletone쓰지말자. 내가쓰는 singletone은 스크립트만 복제시킴. 대신 awake()에 dontdestroy쓰기
 {
     // Outer Properties -----------------------------------------------------------------------------
 
@@ -50,7 +50,7 @@ public class HudUI : Singleton<HudUI>
     // Unity Messages -------------------------------------------------------------------------------
     private void Awake()
     {
-
+        DontDestroyOnLoad(gameObject);
     }
     private void Start()
     {

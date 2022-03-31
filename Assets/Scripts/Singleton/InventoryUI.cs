@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class InventoryUI : Singleton<InventoryUI>
+public class InventoryUI : MonoBehaviour
 {
 	// Definitions ----------------------------------------------------------------------------------
 	// Outer Properties -----------------------------------------------------------------------------
@@ -53,6 +53,8 @@ public class InventoryUI : Singleton<InventoryUI>
 	// Unity Messages -------------------------------------------------------------------------------
 	private void Awake()
 	{
+		DontDestroyOnLoad(gameObject);
+
 		swordImg.SetActive(false);
 		gunImg.SetActive(false);
 		swordShadeImg.SetActive(true);

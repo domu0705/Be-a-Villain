@@ -4,6 +4,9 @@ public class GameManager : Singleton<GameManager>
 {
 	// Properties -----------------------------------------------------------------------------------
 	public Player Player => player;
+	public CameraMovement CameraMovement=> cameraMovement;
+	public HudUI HudUI => hudUI;
+	public InventoryUI InventoryUI => inventoryUI;
 
 	// Outer Functions ------------------------------------------------------------------------------
 	/*	public void Action(ObjectData obj)
@@ -16,6 +19,9 @@ public class GameManager : Singleton<GameManager>
 
 	// Fields : caching -----------------------------------------------------------------------------
 	private Player player;
+	[SerializeField] private CameraMovement cameraMovement;
+	[SerializeField] private HudUI hudUI;
+	[SerializeField] private InventoryUI inventoryUI;
 
 	// Fields ---------------------------------------------------------------------------------------
 
@@ -33,10 +39,6 @@ public class GameManager : Singleton<GameManager>
 		//칼이면 콜라이터 켜기
 
 		equipWeapon.Use();
-		/*		else if (equipWeapon.type == Item.Type.Gun)
-		{
-
-		}*/
 	}
 
 	private void Player_CamChange(int camNum)
@@ -46,15 +48,15 @@ public class GameManager : Singleton<GameManager>
 
 	// Unity Inspectors -----------------------------------------------------------------------------
 	public QuestManager questManager;
-	public CameraMovement cameraMovement;
 
 	// Unity Messages -------------------------------------------------------------------------------
 	private void Awake()
 	{
 		player = FindObjectOfType<Player>();
+		cameraMovement = FindObjectOfType<CameraMovement>();
+		hudUI = FindObjectOfType<HudUI>();
+		inventoryUI = FindObjectOfType<InventoryUI>();
 	}
-
-	
 
 	private void OnEnable()//오브젝트가 활성화될 경우 자동으로 호출
 	{

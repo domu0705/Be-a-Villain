@@ -144,7 +144,7 @@ public class Shop : Zone
 	// Unity Messages -------------------------------------------------------------------------------
 	private void Awake()
 	{
-		inventoryUI = InventoryUI.Instance;
+		inventoryUI = GameManager.Instance.InventoryUI;
 
 		zoneUI.anchoredPosition = Vector3.down * 1000;
 		

@@ -6,25 +6,13 @@ public class CameraMovement : MonoBehaviour
 {
     // Outer Properties -----------------------------------------------------------------------------
     public Camera[] camAry;
-
-    // Outer Functions ------------------------------------------------------------------------------
     public PlayerMovement playerMovement;
-    public float followSpeed = 10f;
-    public float sensitivity = 100f;//감도
-    public float clampAngle = 70f; //상하 각도 제한
-
-    float rotX;//mouse input받을 변수
-    float rotY;//mouse input받을 변수
-
     public Transform realCamera;
     public Vector3 dirNormalized;
     public Vector3 finalDir;
-    public float minDistance;//카메라와 player 사이의 거리
-    public float maxDistance;//카메라와 player 사이의 거리
-    public float finalDistance;
     public float smoothness = 10f;
 
-
+    // Outer Functions ------------------------------------------------------------------------------
     public void ChangeCamTo(int num)
     {
         camAry[curCamNum].enabled = false;
@@ -32,7 +20,7 @@ public class CameraMovement : MonoBehaviour
         camAry[curCamNum].enabled = true;
 
 
-        /*if (num == 0)
+        if (num == 0)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -41,7 +29,7 @@ public class CameraMovement : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
-        }*/
+        }
     }
 
     public Camera GetCurrentCamera()
@@ -52,17 +40,26 @@ public class CameraMovement : MonoBehaviour
     // Properties : caching -------------------------------------------------------------------------
 
     // Inner Properties -----------------------------------------------------------------------------
+    [SerializeField] private float finalDistance;//cam 과 player 사이의 거리
+    [SerializeField] private float sensitivity = 200f;//감도
     private int curCamNum = 1;
+    private int thirdViewNum = 1;
+    private float followSpeed = 10f;
+    private float clampAngle = 70f; //상하 각도 제한
+
+    private float rotX;//mouse input받을 변수
+    private float rotY;//mouse input받을 변수
 
     // Inner Functions ------------------------------------------------------------------------------
 
     // Unity Inspectors -----------------------------------------------------------------------------
     public Transform objectToFollow;
+    [SerializeField] private float minDistance;//카메라와 player 사이의 거리
+    [SerializeField] private float maxDistance;//카메라와 player 사이의 거리
 
     // Unity Messages -------------------------------------------------------------------------------
     private void Awake()
     {
-
     }
 
     void Start()
@@ -70,8 +67,9 @@ public class CameraMovement : MonoBehaviour
         rotX = transform.eulerAngles.x;
         rotY = transform.eulerAngles.y;
 
-        dirNormalized = realCamera.localPosition.normalized; //localPosition: 현재 오브젝트를 기준점으로 자식 카메라의 position
-        finalDistance = realCamera.localPosition.magnitude;
+        /*3인칭 cam에서 쓸 변수 초기화*/
+        dirNormalized = camAry[thirdViewNum].transform.localPosition.normalized; //localPosition: 현재 오브젝트를 기준점으로 자식 카메라의 position
+        finalDistance = camAry[thirdViewNum].transform.localPosition.magnitude;
 
         //마우스 커서 없애기
         //Cursor.lockState = CursorLockMode.Locked;
@@ -98,9 +96,10 @@ public class CameraMovement : MonoBehaviour
     private void LateUpdate()
     {
         transform.position = Vector3.MoveTowards(transform.position, objectToFollow.position, followSpeed);
-        finalDir = transform.TransformPoint(dirNormalized * maxDistance);//TransformPoint:로컬좌표를 글로벌로 변환
 
         if (playerMovement.canMove && curCamNum == 1){
+            finalDir = transform.TransformPoint(dirNormalized * maxDistance);//TransformPoint:로컬좌표를 글로벌로 변환
+
             //장애물에 카메라 닿을 때 카메라 옮기기
             RaycastHit hit;
             //부딛혔다면
@@ -112,7 +111,7 @@ public class CameraMovement : MonoBehaviour
             {
                 finalDistance = maxDistance;
             }
-            realCamera.localPosition = Vector3.Lerp(realCamera.localPosition, dirNormalized * finalDistance, Time.deltaTime * smoothness);
+            camAry[curCamNum].transform.localPosition = Vector3.Lerp(camAry[curCamNum].transform.localPosition, dirNormalized * finalDistance, Time.deltaTime * smoothness);
         }
     }
 }

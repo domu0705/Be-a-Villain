@@ -15,17 +15,19 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             {
                 if (instance == null)
                 {
+                    Debug.Log("싱글톤만듦"+ typeof(T).ToString());
                     instance = GameObject.FindObjectOfType<T>();
                     if (instance == null)
                     {
                         var name = typeof(T).ToString();
                         var go = new GameObject(name);
-                        DontDestroyOnLoad(go);//씬이 달라져도 안없어짐
+                        DontDestroyOnLoad(go.gameObject);//씬이 달라져도 안없어짐
 
                         instance = go.AddComponent<T>();
 
                         Debug.Log(string.Format("[{0}] Singleton created", name));
                     }
+
                 }
             }
             return instance;

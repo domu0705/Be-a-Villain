@@ -10,6 +10,8 @@ TagManager:
   - Object
   - NPC
   - Boundary
+  - Floor
+  - Teleporter
   layers:
   - Default
   - TransparentFX
