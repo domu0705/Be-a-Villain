@@ -56,6 +56,7 @@ public class GameManager : Singleton<GameManager>
 		cameraMovement = FindObjectOfType<CameraMovement>();
 		hudUI = FindObjectOfType<HudUI>();
 		inventoryUI = FindObjectOfType<InventoryUI>();
+		//WeaponUI = FindObjectOfType<WeaponUI>();
 	}
 
 	private void OnEnable()//오브젝트가 활성화될 경우 자동으로 호출

@@ -32,8 +32,8 @@ public class Item : MonoBehaviour
 
     // Properties : caching -------------------------------------------------------------------------
     private BoxCollider collider;
-    // Inner Properties -----------------------------------------------------------------------------
 
+    // Inner Properties -----------------------------------------------------------------------------
 
     // Inner Functions ------------------------------------------------------------------------------
 
@@ -52,12 +52,28 @@ public class Item : MonoBehaviour
 
     IEnumerator Shot()
     {
+        StartCoroutine("GunAnim");
+
         //총알 
         Bullet bullet = ObjectManager.Instance.GetBullet();
         bullet.ShootBullet();
         yield return null;
     }
 
+    IEnumerator GunAnim()
+    {
+        Quaternion startRot = transform.rotation;
+        Quaternion destRot = transform.rotation * Quaternion.Euler(new Vector3(-25, 0, -10));
+
+        float elapsedTime = 0.0f;
+        while (elapsedTime < delay)
+        {
+            elapsedTime += Time.deltaTime; // <- move elapsedTime increment here
+            // Rotations
+            transform.rotation = Quaternion.Slerp(destRot, startRot, (elapsedTime / delay));//dest로 순간이동하고 천천히 원위치로 돌아오기
+            yield return new WaitForEndOfFrame();
+        }
+    }
 
     // Unity Inspectors -----------------------------------------------------------------------------
     public TrailRenderer moveEffect;//무기 휘두를 때 효과
@@ -80,4 +96,8 @@ public class Item : MonoBehaviour
 	{
 
 	}
+
+    private void Update()
+    {
+    }
 }

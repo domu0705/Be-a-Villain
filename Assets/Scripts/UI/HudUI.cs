@@ -50,7 +50,7 @@ public class HudUI : MonoBehaviour// gameobject로 있는건 singletone쓰지말자. 내�
     // Unity Messages -------------------------------------------------------------------------------
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+
     }
     private void Start()
     {

@@ -1,137 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &546625092473884616
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6313989703169338040}
-  - component: {fileID: 674998011272794581}
-  - component: {fileID: 1626496736123552988}
-  m_Layer: 0
-  m_Name: Mesh Object
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6313989703169338040
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546625092473884616}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5239101421282890051}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &674998011272794581
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546625092473884616}
-  m_Mesh: {fileID: 5775127838179845233, guid: 1ad176e55baf0174bafd5feb5f88b667, type: 3}
---- !u!23 &1626496736123552988
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546625092473884616}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: e4fdb662f7ceb0540adb32956455c89e, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &4899589086118923257
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5239101421282890051}
-  - component: {fileID: 4899589086118923254}
-  m_Layer: 0
-  m_Name: Gun
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5239101421282890051
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4899589086118923257}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.63, y: 4.69, z: -2.64}
-  m_LocalScale: {x: 4, y: 4, z: 4}
-  m_Children:
-  - {fileID: 6313989703169338040}
-  m_Father: {fileID: 4928688207739971690}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4899589086118923254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4899589086118923257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bba7e49a662367041ab8da766555b032, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  price: 500
-  value: 20
-  delay: 0
-  itemName: "\uBB34\uD55C\uC758 \uCD1D"
-  info: "\uBE75\uBE75"
-  moveEffect: {fileID: 0}
 --- !u!1 &4928688206585922265
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +660,7 @@ MonoBehaviour:
     \uCD5C\uC885 \uBCF4\uC2A4\uB4E4 \uC0AC\uC774\uC758 \uC2A4\uD14C\uB514 \uC140\uB7EC\uB77C\uACE0
     \uB9D0\uD558\uB294\uAC8C \uC88B\uACA0\uAD70."
   moveEffect: {fileID: 4928688207397715979}
+  bulletPos: {fileID: 0}
 --- !u!65 &4928688207298945422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1110,6 +979,7 @@ MonoBehaviour:
     \uAE30\uC120 \uC81C\uC555\uC744 \uD558\uAE30 \uC88B\uC740 \uAC80\uC774\uB77C\uB124.
     \uAC80\uC774 \uC790\uB124\uB97C \uBD80\uB974\uACE0 \uC788\uAD6C\uB9CC."
   moveEffect: {fileID: 4928688206951333135}
+  bulletPos: {fileID: 0}
 --- !u!65 &4928688207412934733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1229,6 +1099,7 @@ MonoBehaviour:
     \uD718\uB458\uB7EC \uC548\uC8FD\uB294 \uC6A9\uC0AC \uC5C6\uB2E4\" \uB77C\uB294
     \uB9D0\uB3C4 \uC788\uC9C0 \uC54A\uB098."
   moveEffect: {fileID: 4928688208558714223}
+  bulletPos: {fileID: 0}
 --- !u!65 &4928688207477333153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1379,6 +1250,7 @@ MonoBehaviour:
     \uAC80\uC774\uC9C0. \uBB34\uC5C7\uC774 \uAE43\uB4E4\uC5C8\uB294\uC9C0\uB294 \uC81C\uBC1C
     \uBB3C\uC5B4\uBCF4\uC9C0 \uB9D0\uC544\uC8FC\uAC8C ."
   moveEffect: {fileID: 4928688207819491677}
+  bulletPos: {fileID: 0}
 --- !u!65 &4928688207579768623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1498,6 +1370,7 @@ MonoBehaviour:
     \uC5F4\uAE30\uAC00 \uC5EC\uAE30\uAE4C\uC9C0 \uB290\uAEF4\uC9C0\uB294\uAD6C\uB9CC.
     \uD558\uD558"
   moveEffect: {fileID: 4928688207628145217}
+  bulletPos: {fileID: 0}
 --- !u!65 &4928688207619894600
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1714,7 +1587,6 @@ Transform:
   - {fileID: 4928688207412934769}
   - {fileID: 4928688207619894604}
   - {fileID: 4928688207298945458}
-  - {fileID: 5239101421282890051}
   m_Father: {fileID: 4928688207894579960}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2513,6 +2385,7 @@ MonoBehaviour:
     \uC560\uC6A9\uD558\uB294 \uAC80\uC774\uC9C0. \uBB50\uB77C\uACE0 \uC801\uD600\uC788\uB294\uC9C0\uB294
     \uB098\uB3C4 \uBAA8\uB978\uB2E4\uB124. "
   moveEffect: {fileID: 4928688208240270091}
+  bulletPos: {fileID: 0}
 --- !u!65 &4928688208347349153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2929,7 +2802,7 @@ MonoBehaviour:
   - {fileID: 4928688207412934768}
   - {fileID: 4928688207619894607}
   - {fileID: 4928688207298945461}
-  gun: {fileID: 4899589086118923257}
+  gun: {fileID: 0}
 --- !u!1 &4928688208683746130
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
 	public void ShootBullet()
 	{
 		GameObject dest = bulletDestination();
-		gameObject.transform.position = dest.transform.position;
+		gameObject.transform.position = dest.transform.position + dest.transform.forward*2;
 		gameObject.SetActive(true);
 
 		//Vector3 shootDir = 

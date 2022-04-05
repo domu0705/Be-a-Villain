@@ -53,8 +53,6 @@ public class InventoryUI : MonoBehaviour
 	// Unity Messages -------------------------------------------------------------------------------
 	private void Awake()
 	{
-		DontDestroyOnLoad(gameObject);
-
 		swordImg.SetActive(false);
 		gunImg.SetActive(false);
 		swordShadeImg.SetActive(true);
