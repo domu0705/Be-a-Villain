@@ -1,41 +1,42 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectData : MonoBehaviour
 {
+    // Outer Properties -----------------------------------------------------------------------------
     public bool isNpc;
-    public float lookSpeed = 3;
-    [SerializeField]
-    Dictionary<int, string[]> talkData; //int:quest num, string:dialogue
+    public int npcNum;
+
+    // Outer Functions ------------------------------------------------------------------------------
+    // Events ---------------------------------------------------------------------------------------
+
+
+
+    // Properties : caching -------------------------------------------------------------------------
+    // Inner Properties -----------------------------------------------------------------------------
+    [SerializeField] private float lookSpeed = 3;
+
+    // Inner Functions ------------------------------------------------------------------------------
+    // Coroutine ------------------------------------------------------------------------------------
+    // Event Handlers -------------------------------------------------------------------------------
+    // Overrides ------------------------------------------------------------------------------------
+
+
+
+    // Unity Inspectors -----------------------------------------------------------------------------
+
+
+    // Unity Messages -------------------------------------------------------------------------------
     
     private void Awake()
     {
-        talkData = new Dictionary<int, string[]>();
 
-        GenerateTalkData();
-        GeneratePortraitData();
     }
 
-    void GenerateTalkData()
-    {
-        talkData.Add(0, new string[] {"green npc 퀘스트 0번 대사야~~", "퀘스트 0번의 두번째 대사야~" });
-        talkData.Add(1, new string[] { "이거 퀘스트 1번 대산데..", "퉤스트 1번 대사 두번째야!" });
-    }
 
     void GeneratePortraitData()
     {
 
-    }
-
-    public string GetTalkData(int questNum,int talkIndex)
-    {
-        Debug.Log("GetTalkData() | questNum=" + questNum + " talkIndex=" + talkIndex);
-
-        if (talkIndex < talkData[questNum].Length)
-            return talkData[questNum][talkIndex];
-        else
-            return null;
     }
 
     void lookAt(GameObject obj)

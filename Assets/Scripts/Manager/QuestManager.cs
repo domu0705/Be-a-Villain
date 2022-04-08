@@ -13,4 +13,9 @@ public class QuestManager : Singleton<QuestManager>
     {
 
     }
+
+    public void Awake()
+    {
+
+    }
 }

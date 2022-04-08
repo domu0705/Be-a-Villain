@@ -17,19 +17,22 @@ public class GameManager : Singleton<GameManager>
 	*/
 
 
-	// Fields : caching -----------------------------------------------------------------------------
+	// Properties : caching -------------------------------------------------------------------------
 	private Player player;
 	[SerializeField] private CameraMovement cameraMovement;
 	[SerializeField] private HudUI hudUI;
 	[SerializeField] private InventoryUI inventoryUI;
+	[SerializeField] private QuestManager questManager;
 
-	// Fields ---------------------------------------------------------------------------------------
+	// Inner Properties -----------------------------------------------------------------------------
+	[SerializeField] private TalkManager talkManager;
 
+	// Inner Functions ------------------------------------------------------------------------------
 	// Event Handlers -------------------------------------------------------------------------------
 	private void Player_OnInteraction(Player player, ObjectData obj)
 	{
 		player.Movement.Stop();
-		TalkManager.Instance.Talk(questManager.curQuestNum, obj);
+		talkManager.Talk(questManager.curQuestNum, obj);
 	}
 
 	private void Player_Attack(Player player, Item equipWeapon)
@@ -47,16 +50,19 @@ public class GameManager : Singleton<GameManager>
     }
 
 	// Unity Inspectors -----------------------------------------------------------------------------
-	public QuestManager questManager;
 
 	// Unity Messages -------------------------------------------------------------------------------
 	private void Awake()
 	{
+		Debug.Log("게임 메니저 awake()");
 		player = FindObjectOfType<Player>();
+		Debug.Log("게임 메니저의 player="+ player.gameObject.scene.name);
 		cameraMovement = FindObjectOfType<CameraMovement>();
 		hudUI = FindObjectOfType<HudUI>();
 		inventoryUI = FindObjectOfType<InventoryUI>();
+		questManager = FindObjectOfType<QuestManager>();
 		//WeaponUI = FindObjectOfType<WeaponUI>();
+		talkManager = TalkManager.Instance;
 	}
 
 	private void OnEnable()//오브젝트가 활성화될 경우 자동으로 호출

@@ -31,10 +31,6 @@ public class Player : MonoBehaviour
         playerMovement.canMove = true;
     }
 
-    public void StopPlayer()
-    {
-        playerMovement.canMove = false;
-    }
 
     public void ChangeCoin(int newCoin)
     {
@@ -132,7 +128,7 @@ public class Player : MonoBehaviour
     // Fields : caching -----------------------------------------------------------------------------
     private Animator anim;
     private Rigidbody rigid;
-    private PlayerMovement playerMovement;
+    [SerializeField] private PlayerMovement playerMovement;
 
     // Inner Properties -----------------------------------------------------------------------------
     private InventoryUI inventoryUI;
@@ -212,6 +208,7 @@ public class Player : MonoBehaviour
     // Unity Messages -------------------------------------------------------------------------------
     private void Awake()
     {
+        Debug.Log("player Awake()");
         anim = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody>();
         playerMovement = GetComponent<PlayerMovement>();

@@ -11,10 +11,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void Stop()
     {
+        Debug.Log("Stop()");
+
         canMove = false;
 
         anim.SetBool("isWalking", false); // 이거 안하면 idle됐다가 바로 다시 걸음
         anim.SetTrigger("doIdle");
+    }
+
+    public void Resume()
+    {
+        canMove = true;
     }
 
     // Inner Properties -----------------------------------------------------------------------------

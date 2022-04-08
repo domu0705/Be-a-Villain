@@ -15,7 +15,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             {
                 if (instance == null)
                 {
-                    Debug.Log("싱글톤만듦"+ typeof(T).ToString());
+                    //Debug.Log("싱글톤만들기 전에 원래 있나 찾아봄"+ typeof(T).ToString());
                     instance = GameObject.FindObjectOfType<T>();
                     if (instance == null)
                     {
@@ -25,7 +25,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
                         instance = go.AddComponent<T>();
 
-                        Debug.Log(string.Format("[{0}] Singleton created", name));
+                        //Debug.Log(string.Format("[{0}] Singleton created", name));
                     }
 
                 }

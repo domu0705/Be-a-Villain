@@ -26,7 +26,7 @@ public class Zone : MonoBehaviour
 	{
 		player.Movement.canMove = true;
 		zoneUI.anchoredPosition = Vector3.down * 1000;
-		player.ResumePlayer();
+		player.Movement.Resume();
 		player = null;
 	}
 
