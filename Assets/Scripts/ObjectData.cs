@@ -4,9 +4,8 @@ using UnityEngine;
 public class ObjectData : MonoBehaviour
 {
     // Outer Properties -----------------------------------------------------------------------------
-    public bool isNpc;
     public int npcNum;
-
+    
     // Outer Functions ------------------------------------------------------------------------------
     // Events ---------------------------------------------------------------------------------------
 
@@ -14,8 +13,9 @@ public class ObjectData : MonoBehaviour
 
     // Properties : caching -------------------------------------------------------------------------
     // Inner Properties -----------------------------------------------------------------------------
+    [SerializeField] private string objName;
+    [SerializeField] private bool isNpc;
     [SerializeField] private float lookSpeed = 3;
-
     // Inner Functions ------------------------------------------------------------------------------
     // Coroutine ------------------------------------------------------------------------------------
     // Event Handlers -------------------------------------------------------------------------------
@@ -27,7 +27,7 @@ public class ObjectData : MonoBehaviour
 
 
     // Unity Messages -------------------------------------------------------------------------------
-    
+
     private void Awake()
     {
 

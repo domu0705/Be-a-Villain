@@ -133,10 +133,20 @@ public class Player : MonoBehaviour
     // Inner Properties -----------------------------------------------------------------------------
     private InventoryUI inventoryUI;
     private HudUI hudUI;
-    [SerializeField]private Item equipWeapon;
     private float weaponDelay;
     private bool weaponDelayEnd;
-    private bool canAttack; // 무기를 들 수 있는 scene인지 체크
+
+    [Header("Curr State")]
+    [SerializeField]private Item equipWeapon;
+    [SerializeField] private GameObject nearObj;//상호작용 가능한 object
+    [SerializeField] private int swordNum = 0; //무기 없는상태(0)에서 시작
+    [SerializeField] private bool isDead = false;
+    [Header("Other Input")]
+    [SerializeField] private bool eDown;
+    [SerializeField] private bool pressOne;
+    [SerializeField] private bool pressTwo;
+    [SerializeField] private bool leftMouseDown;
+    [SerializeField] private bool rightouseDown;
 
     // Functions ------------------------------------------------------------------------------------
     private void interaction()
@@ -190,20 +200,9 @@ public class Player : MonoBehaviour
     }
 
     // Unity Inspectors -----------------------------------------------------------------------------
-    [Header("Curr State")]
-    [SerializeField] private GameObject nearObj;//상호작용 가능한 object
-    [SerializeField] private int swordNum = 0; //무기 없는상태(0)에서 시작
-    [SerializeField] private bool isDead = false;
-    [Header("Other Input")]
-    [SerializeField] private bool eDown;
-    [SerializeField] private bool pressOne;
-    [SerializeField] private bool pressTwo;
-    [SerializeField] private bool leftMouseDown;
-    [SerializeField] private bool rightouseDown;
     [Header("Weapons")]
     [SerializeField] private GameObject[] swordAry;
     [SerializeField] private GameObject gun;
-
 
     // Unity Messages -------------------------------------------------------------------------------
     private void Awake()
@@ -227,6 +226,7 @@ public class Player : MonoBehaviour
     {
         ChangeHealth(0);
         swordNum = 0;
+        ChangeSword(1);
         /*Initialize HUD UI*/
         hudUI.UpdateCoin(coin);
         hudUI.UpdateHealth(curHealth, maxHealth);

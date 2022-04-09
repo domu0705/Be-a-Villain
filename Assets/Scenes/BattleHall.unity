@@ -9701,7 +9701,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000013435347056, guid: 11a66e0e06ad0c241832faf88daf7272, type: 3}
       propertyPath: m_Name
-      value: 1 Judge
+      value: 3 Judge
       objectReference: {fileID: 0}
     - target: {fileID: 1000013435347056, guid: 11a66e0e06ad0c241832faf88daf7272, type: 3}
       propertyPath: m_TagString
@@ -9709,7 +9709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013929067468, guid: 11a66e0e06ad0c241832faf88daf7272, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4000013929067468, guid: 11a66e0e06ad0c241832faf88daf7272, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9770,8 +9770,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3616c89e8f28446a18a56f4c41df2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcNum: 3
+  objName: "\uC8FC\uC220\uC0AC  NPC"
   isNpc: 1
-  npcNum: 1
   lookSpeed: 5
 --- !u!54 &434455204
 Rigidbody:
@@ -25024,7 +25025,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000012248948448, guid: 416704f0bde95554695c5785f15a01ff, type: 3}
       propertyPath: m_Name
-      value: Nun
+      value: 2 Nun
       objectReference: {fileID: 0}
     - target: {fileID: 1000012248948448, guid: 416704f0bde95554695c5785f15a01ff, type: 3}
       propertyPath: m_TagString
@@ -25032,7 +25033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012199857034, guid: 416704f0bde95554695c5785f15a01ff, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4000012199857034, guid: 416704f0bde95554695c5785f15a01ff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25093,8 +25094,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3616c89e8f28446a18a56f4c41df2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcNum: 2
+  objName: "\uC218\uC0C1\uD55C NPC"
   isNpc: 1
-  npcNum: 0
   lookSpeed: 5
 --- !u!54 &1706041737
 Rigidbody:
@@ -27970,7 +27972,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000013443838794, guid: 1d369ac37f65b2847886afbde5c64d9c, type: 3}
       propertyPath: m_Name
-      value: PinkBunny
+      value: 1 Bunny
       objectReference: {fileID: 0}
     - target: {fileID: 1000013443838794, guid: 1d369ac37f65b2847886afbde5c64d9c, type: 3}
       propertyPath: m_TagString
@@ -27978,7 +27980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013940461008, guid: 1d369ac37f65b2847886afbde5c64d9c, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4000013940461008, guid: 1d369ac37f65b2847886afbde5c64d9c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28039,9 +28041,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3616c89e8f28446a18a56f4c41df2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcNum: 1
+  objName: "\uD754\uD55C \uD1A0\uB07C"
   isNpc: 1
-  npcNum: 0
-  lookSpeed: 5
+  lookSpeed: 10
 --- !u!54 &1949607217
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28911,8 +28914,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3616c89e8f28446a18a56f4c41df2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isNpc: 1
   npcNum: 0
+  objName: 
+  isNpc: 1
   lookSpeed: 5
 --- !u!1001 &2040526669
 PrefabInstance:
