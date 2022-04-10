@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
 
             /*공격력 변경*/
             weapon = swordAry[swordNum].GetComponent<Item>();
-            curSwordPower = weapon.value;
+            curSwordPower = weapon.damage;
             hudUI.UpdateSword(curSwordPower, maxSword);
 
             inventoryUI.CheckSwordUI();
@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
 
             /*공격력 변경*/
             weapon = gun.GetComponent<Item>();
-            curSwordPower = weapon.value;
+            curSwordPower = weapon.damage;
             hudUI.UpdateSword(curSwordPower, maxSword);
 
             inventoryUI.CheckGunUI();
@@ -193,7 +193,7 @@ public class Player : MonoBehaviour
     private void getInput()
     {
         eDown = Input.GetKeyDown("e");// KeyCode.E);
-        leftMouseDown = Input.GetButton("Fire1"); //마우스 왼쪽
+        leftMouseDown = Input.GetButtonDown("Fire1"); //마우스 왼쪽
         pressOne = Input.GetButtonDown("Num1");// KeyCode.E);
         pressTwo = Input.GetButtonDown("Num2"); //마우스 왼쪽
                                                 //rightMouseDown = Input.GetButtonDown("Fire2");//마우스 우클릭

@@ -53,7 +53,7 @@ public class Shop : Zone
 			if (HasEnughCoin(shileditem) && !player.IsShieldFull)
 			{
 				player.ChangeCoin(-shileditem.price);
-				player.ChangeShield(shileditem.value);
+				player.ChangeShield(shileditem.damage);
 			}
 		}
 

@@ -66,7 +66,6 @@ public class Bullet : MonoBehaviour
 		{
 			other.gameObject.SetActive(false);
 		}
+
 	}
-
-
 }
