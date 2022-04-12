@@ -64,8 +64,13 @@ public class Bullet : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Boundary")
 		{
-			other.gameObject.SetActive(false);
+			gameObject.SetActive(false);
 		}
 
+	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+		gameObject.SetActive(false);
 	}
 }

@@ -103,7 +103,7 @@ public class CameraMovement : MonoBehaviour
             //장애물에 카메라 닿을 때 카메라 옮기기
             RaycastHit hit;
             //부딛혔다면
-            if (Physics.Linecast(transform.position, finalDir, out hit))
+            if (Physics.Linecast(transform.position, finalDir, out hit) && (hit.collider.gameObject.tag != "Boundary" ))
             {
                 finalDistance = Mathf.Clamp(hit.distance, minDistance, maxDistance);
             }//아니라면

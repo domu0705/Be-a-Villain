@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
@@ -17,11 +17,12 @@ public class Enemy : MonoBehaviour
 
 	// Inner Properties -----------------------------------------------------------------------------
 	[SerializeField] private int health;
+	private NavMeshAgent nav;
+	private Rigidbody rigid;
 
 	// Inner Functions ------------------------------------------------------------------------------
 	private void getDamage(int damage)
     {
-		anim.SetTrigger("doAttacked");
 
 		if(damage >= health)
         {
@@ -30,20 +31,26 @@ public class Enemy : MonoBehaviour
         }
 		else
         {
+			anim.SetTrigger("doAttacked");
 			health -= damage;
         }
     } 
 
-
-	IEnumerator die()
+	private void deleteExternalForce()//외부의 물리적 힘에 의해 AI의 이동이 망가지지 않도록 외부 힘 제거.
     {
+		rigid.velocity = Vector3.zero;
+		rigid.angularVelocity = Vector3.zero;
+	}
+
+	// Coroutine ------------------------------------------------------------------------------------
+	IEnumerator die()
+	{
 		anim.SetTrigger("doDie");
 		yield return new WaitForSeconds(1f);
 
 		gameObject.SetActive(false);
-    }
+	}
 
-	// Coroutine ------------------------------------------------------------------------------------
 	// Event Handlers -------------------------------------------------------------------------------
 	// Overrides ------------------------------------------------------------------------------------
 
@@ -55,15 +62,28 @@ public class Enemy : MonoBehaviour
 	private void Awake()
 	{
 		anim = GetComponent<Animator>();
+		rigid = GetComponent<Rigidbody>();
+		nav = GetComponent<NavMeshAgent>();
 	}
 	private void Start()
 	{
 		
 	}
 
+    private void Update()
+    {
+		nav.SetDestination(GameManager.Instance.Player.transform.position);
+    }
+
+    private void FixedUpdate()
+    {
+		deleteExternalForce();
+
+	}
+
     //private void OnTriggerEnter(Collider other)
 
-	private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
 	{
         if(other.tag == "Bullet")
         {
