@@ -85,7 +85,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
 	{
-        if(other.tag == "Bullet")
+        /*if(other.tag == "Bullet")
         {
 			Debug.Log("총맞음");
 			Bullet bullet = other.GetComponent<Bullet>();
@@ -98,6 +98,24 @@ public class Enemy : MonoBehaviour
 			Debug.Log("공격당함");
 			Item weapon = other.GetComponent<Item>();
 			getDamage(weapon.damage);
-		}
+		}*/
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+		if (collision.gameObject.tag == "Bullet")
+		{
+			Debug.Log("총맞음");
+			Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+			getDamage(bullet.damage);
+
+
+		}
+		else if (collision.gameObject.tag == "Damager")
+		{
+			Debug.Log("공격당함");
+			Item weapon = collision.gameObject.GetComponent<Item>();
+			getDamage(weapon.damage);
+		}
+	}
 }

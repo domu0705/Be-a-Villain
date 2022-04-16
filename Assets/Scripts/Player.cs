@@ -128,7 +128,7 @@ public class Player : MonoBehaviour
     // Fields : caching -----------------------------------------------------------------------------
     private Animator anim;
     private Rigidbody rigid;
-    private Material mat; // 포장지
+    //private Material mat; // 포장지
     [SerializeField] private PlayerMovement playerMovement;
 
     // Inner Properties -----------------------------------------------------------------------------
@@ -212,7 +212,7 @@ public class Player : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody>();
         playerMovement = GetComponent<PlayerMovement>();
-        mat = GetComponent<MeshRenderer>().material;
+        //mat = GetComponent<MeshRenderer>().material;
 
         inventoryUI = GameManager.Instance.InventoryUI;
         hudUI =  GameManager.Instance.HudUI;

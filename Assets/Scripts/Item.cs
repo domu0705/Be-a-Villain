@@ -34,6 +34,9 @@ public class Item : MonoBehaviour
     private BoxCollider collider;
 
     // Inner Properties -----------------------------------------------------------------------------
+    [SerializeField] Quaternion startRot;
+    [SerializeField] Quaternion destRot;
+    Quaternion gunGradient;
 
     // Inner Functions ------------------------------------------------------------------------------
 
@@ -62,17 +65,18 @@ public class Item : MonoBehaviour
 
     IEnumerator GunAnim()
     {
-        Quaternion startRot = transform.rotation;
-        Quaternion destRot = transform.rotation * Quaternion.Euler(new Vector3(-25, 0, -10));
-
         float elapsedTime = 0.0f;
+        destRot = transform.localRotation * gunGradient;
+
         while (elapsedTime < delay)
         {
             elapsedTime += Time.deltaTime; // <- move elapsedTime increment here
             // Rotations
-            transform.rotation = Quaternion.Slerp(destRot, startRot, (elapsedTime / delay));//dest로 순간이동하고 천천히 원위치로 돌아오기
+            transform.localRotation = Quaternion.Slerp(destRot, startRot, (elapsedTime / delay));//dest로 순간이동하고 천천히 원위치로 돌아오기
             yield return new WaitForEndOfFrame();
         }
+
+        transform.localRotation = startRot; ; //시간내에 목표기울기에 도달하지 못하면 바로 바꿔주기
     }
 
     // Unity Inspectors -----------------------------------------------------------------------------
@@ -90,6 +94,9 @@ public class Item : MonoBehaviour
             collider.enabled = false;
             moveEffect.enabled = false;
         }
+
+        gunGradient = Quaternion.Euler(new Vector3(-25, 0, -10));
+        startRot = transform.localRotation;
     }
 
 	private void Start()
@@ -99,5 +106,9 @@ public class Item : MonoBehaviour
 
     private void Update()
     {
+        if (type == Type.Gun)
+        {
+            Debug.Log("transform.localRotation=" + transform.localRotation);
+        }
     }
 }
