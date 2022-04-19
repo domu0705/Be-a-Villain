@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float curShieldPower = 2;
 
     public PlayerMovement Movement => playerMovement;
+    public GameObject Obj => playerObject;
     public bool IsPowerFull => curHealth >= maxHealth;
     public bool IsShieldFull => curShieldPower >= maxShield;
     public float Coin => coin;
@@ -45,6 +46,10 @@ public class Player : MonoBehaviour
             curHealth = maxHealth;
 
         hudUI.UpdateHealth(curHealth, maxHealth);
+
+        if (curHealth <= 0) 
+            die();
+
     }
 
     public void ChangeSword(int newSwordNum) //무기 바꿔들기
@@ -136,6 +141,7 @@ public class Player : MonoBehaviour
     private HudUI hudUI;
     private float weaponDelay;
     private bool weaponDelayEnd;
+    private MeshRenderer[] meshes;
 
     [Header("Curr State")]
     [SerializeField]private Item equipWeapon;
@@ -190,6 +196,11 @@ public class Player : MonoBehaviour
             weaponDelay = 0;
         }
     }
+    
+    private void die()
+    {
+        anim.SetTrigger("doDie");
+    }
 
     private void getInput()
     {
@@ -200,10 +211,28 @@ public class Player : MonoBehaviour
                                                 //rightMouseDown = Input.GetButtonDown("Fire2");//마우스 우클릭
     }
 
+    private void changeColor(Color color)
+    {
+        foreach (MeshRenderer mesh in meshes)
+        {
+            mesh.material.color = color;//Color.yellow;
+        }
+    }
+
+    // Coroutine ------------------------------------------------------------------------------------
+    IEnumerator attacked(Enemy enemy)
+    {
+        ChangeHealth(-enemy.attackPower);
+        changeColor(Color.red);
+        yield return new WaitForSeconds(1f);
+        changeColor(Color.white);
+    }
+
     // Unity Inspectors -----------------------------------------------------------------------------
     [Header("Weapons")]
     [SerializeField] private GameObject[] swordAry;
     [SerializeField] private GameObject gun;
+    [SerializeField] private GameObject playerObject;
 
     // Unity Messages -------------------------------------------------------------------------------
     private void Awake()
@@ -212,7 +241,7 @@ public class Player : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody>();
         playerMovement = GetComponent<PlayerMovement>();
-        //mat = GetComponent<MeshRenderer>().material;
+        meshes = GetComponentsInChildren<MeshRenderer>();
 
         inventoryUI = GameManager.Instance.InventoryUI;
         hudUI =  GameManager.Instance.HudUI;
@@ -262,6 +291,11 @@ public class Player : MonoBehaviour
             Coin coinScript = other.GetComponent<Coin>();
             ChangeCoin(coinScript.value);
             Destroy(other.gameObject);
+        }
+        else if (other.tag == "Damager")
+        {
+            Enemy enemy = other.GetComponentInParent<Enemy>();
+            StartCoroutine( attacked(enemy));
         }
     }
 

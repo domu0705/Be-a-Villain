@@ -8,7 +8,7 @@ public class Item : MonoBehaviour
     public enum Type { Gun, Sword, Shield };
     public Type type;
     public int price;
-    public int damage;//공격력,방어력
+    public int damage;//공격력,방어력 (Gun 의 Damage는 Bullet에서 관리)
     public float delay;//무기 재사용까지 걸리는 시간
 
     [TextArea(3, 5)]
@@ -45,12 +45,10 @@ public class Item : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         moveEffect.enabled = true;
-        yield return new WaitForSeconds(0.3f);
         collider.enabled = true;
-        yield return new WaitForSeconds(0.3f); 
-        collider.enabled = false;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.6f); 
         moveEffect.enabled = false;
+        collider.enabled = false;
     }
 
     IEnumerator Shot()
@@ -106,9 +104,6 @@ public class Item : MonoBehaviour
 
     private void Update()
     {
-        if (type == Type.Gun)
-        {
-            Debug.Log("transform.localRotation=" + transform.localRotation);
-        }
+
     }
 }

@@ -20,14 +20,18 @@ public class CameraMovement : MonoBehaviour
         camAry[curCamNum].enabled = true;
 
 
-        if (num == 0)
+        if (num == 0)//1 인칭
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            //Cursor.lockState = CursorLockMode.Locked;
+            gun.SetActive(true);
+            //GameManager.Instance.Player.Obj.SetActive(false);
+            //Cursor.visible = false;
         }
         else
         {
             Cursor.lockState = CursorLockMode.Confined;
+            gun.SetActive(false);
+            //GameManager.Instance.Player.Obj.SetActive(true);
             Cursor.visible = true;
         }
     }
@@ -49,6 +53,8 @@ public class CameraMovement : MonoBehaviour
 
     private float rotX;//mouse input받을 변수
     private float rotY;//mouse input받을 변수
+    // Inner Properties -----------------------------------------------------------------------------
+    GameObject gun;
 
     // Inner Functions ------------------------------------------------------------------------------
 
@@ -60,6 +66,9 @@ public class CameraMovement : MonoBehaviour
     // Unity Messages -------------------------------------------------------------------------------
     private void Awake()
     {
+        gun = camAry[0].transform.GetChild(0).gameObject;
+
+        gun.SetActive(false);
     }
 
     void Start()
@@ -97,13 +106,14 @@ public class CameraMovement : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, objectToFollow.position, followSpeed);
 
-        if (playerMovement.canMove && curCamNum == 1){
+        if (playerMovement.canMove && curCamNum == 1)
+        {
             finalDir = transform.TransformPoint(dirNormalized * maxDistance);//TransformPoint:로컬좌표를 글로벌로 변환
 
             //장애물에 카메라 닿을 때 카메라 옮기기
             RaycastHit hit;
             //부딛혔다면
-            if (Physics.Linecast(transform.position, finalDir, out hit) && (hit.collider.gameObject.tag != "Boundary" ))
+            if (Physics.Linecast(transform.position, finalDir, out hit) && (hit.collider.gameObject.tag != "Boundary"))
             {
                 finalDistance = Mathf.Clamp(hit.distance, minDistance, maxDistance);
             }//아니라면

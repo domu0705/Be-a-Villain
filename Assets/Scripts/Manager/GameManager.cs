@@ -37,7 +37,7 @@ public class GameManager : Singleton<GameManager>
 
 	private void Player_Attack(Player player, Item equipWeapon)
 	{
-		Debug.Log("GameManager.Player_Attack()");
+		//Debug.Log("GameManager.Player_Attack()");
 		//총이면 총알 오브젝트 풀링으로 가져오기
 		//칼이면 콜라이터 켜기
 
@@ -54,14 +54,13 @@ public class GameManager : Singleton<GameManager>
 	// Unity Messages -------------------------------------------------------------------------------
 	private void Awake()
 	{
-		Debug.Log("게임 메니저 awake()");
+		//Debug.Log("게임 메니저 awake()");
 		player = FindObjectOfType<Player>();
 		Debug.Log("게임 메니저의 player="+ player.gameObject.scene.name);
 		cameraMovement = FindObjectOfType<CameraMovement>();
 		hudUI = FindObjectOfType<HudUI>();
 		inventoryUI = FindObjectOfType<InventoryUI>();
 		questManager = FindObjectOfType<QuestManager>();
-		//WeaponUI = FindObjectOfType<WeaponUI>();
 		talkManager = TalkManager.Instance;
 	}
 

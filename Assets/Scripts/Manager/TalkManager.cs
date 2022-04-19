@@ -55,7 +55,7 @@ public class TalkManager : Singleton<TalkManager>
 	// Unity Messages -------------------------------------------------------------------------------
 	private void Awake()
 	{
-		Debug.Log("talk manager Awake()");
+		//Debug.Log("talk manager Awake()");
 	}
 
 	private void Start()

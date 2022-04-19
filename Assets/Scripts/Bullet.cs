@@ -66,7 +66,10 @@ public class Bullet : MonoBehaviour
 		{
 			gameObject.SetActive(false);
 		}
-
+		if (other.gameObject.tag == "Enemy")
+		{
+			Debug.Log("ÃÑ¾Ë Àû°íÇã¤¿ ºÎµóÈû¤¤");
+		}
 	}
 
     private void OnCollisionEnter(Collision collision)
