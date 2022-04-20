@@ -26,10 +26,6 @@ public class #SCRIPTNAME# : MonoBehaviour
 
 
 	// Unity Inspectors -----------------------------------------------------------------------------
-	[Header("★ Bindings")]
-	[SerializeField] private Text labelTXT = null;
-	[Header("★ Config")]
-	[SerializeField] private int intValue = 0;
 
 	// Unity Messages -------------------------------------------------------------------------------
 	private void Awake()
