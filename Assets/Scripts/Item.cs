@@ -57,7 +57,10 @@ public class Item : MonoBehaviour
 
         //ÃÑ¾Ë 
         Bullet bullet = ObjectManager.Instance.GetBullet();
-        bullet.ShootBullet();
+        GameObject curCamera = GameManager.Instance.CameraMovement.GetCurrentCamera().gameObject;
+        Vector3 bulletStartPos = curCamera.transform.position + curCamera.transform.forward * 2;
+
+        bullet.ShootBulletFrom(bulletStartPos,curCamera.transform);
         yield return null;
     }
 

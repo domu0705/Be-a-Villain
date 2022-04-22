@@ -25,7 +25,8 @@ public class EnemyB : Enemy
 		anim.SetTrigger("doAttack1");
 		yield return new WaitForSeconds(0.4f);
 
-		//attackArea.SetActive(true);
+		Bullet enemyBullet = ObjectManager.Instance.GetEnemyBullet();
+		enemyBullet.ShootBulletFrom(gun.transform.position, gun.transform);
 		while (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack1") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)//ANIM 끝날때 까지 기다리기
 		{
 			yield return new WaitForEndOfFrame();
@@ -39,6 +40,7 @@ public class EnemyB : Enemy
 
 
 	// Unity Inspectors -----------------------------------------------------------------------------
+	[SerializeField] private GameObject gun;
 
 	// Unity Messages -------------------------------------------------------------------------------
 

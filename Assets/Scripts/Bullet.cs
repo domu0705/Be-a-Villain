@@ -9,15 +9,14 @@ public class Bullet : MonoBehaviour
 	public int damage;
 
 	// Outer Functions ------------------------------------------------------------------------------
-	public void ShootBullet()
+	public void ShootBulletFrom(Vector3 startPos,Transform direction)
 	{
-		GameObject dest = bulletDestination();
-		gameObject.transform.position = dest.transform.position + dest.transform.forward*2;
+		gameObject.transform.position = startPos;
 		gameObject.SetActive(true);
 
 		//Vector3 shootDir = 
 		Rigidbody bulletRigid = gameObject.GetComponent<Rigidbody>();
-		bulletRigid.velocity = dest.transform.forward * bulletSpeed;//총알이 나가야하니까 속도를 붙여줌
+		bulletRigid.velocity = direction.forward * bulletSpeed;//총알이 나가야하니까 속도를 붙여줌
 	}
 
 
@@ -32,7 +31,7 @@ public class Bullet : MonoBehaviour
 	private Vector3 screenCenter;
 
 	// Inner Properties -----------------------------------------------------------------------------
-	private int bulletSpeed = 200;
+	[SerializeField] private int bulletSpeed = 200;
 
 	// Inner Functions ------------------------------------------------------------------------------
 	private GameObject bulletDestination()
@@ -66,14 +65,7 @@ public class Bullet : MonoBehaviour
 		{
 			gameObject.SetActive(false);
 		}
-		if (other.gameObject.tag == "Enemy")
-		{
-			Debug.Log("총알 적고허ㅏ 부딛힘ㄴ");
-		}
-	}
 
-    private void OnCollisionEnter(Collision collision)
-    {
 		gameObject.SetActive(false);
 	}
 }

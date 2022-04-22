@@ -22,10 +22,10 @@ public class CameraMovement : MonoBehaviour
 
         if (num == 0)//1 ÀÎÄª
         {
-            //Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.Locked;
             gun.SetActive(true);
             //GameManager.Instance.Player.Obj.SetActive(false);
-            //Cursor.visible = false;
+            Cursor.visible = false;
         }
         else
         {
