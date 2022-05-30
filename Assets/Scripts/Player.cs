@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
 
         hudUI.UpdateHealth(curHealth, maxHealth);
 
-        if (curHealth <= 0) 
+        if (curHealth <= 0)
             die();
 
     }
@@ -58,12 +58,12 @@ public class Player : MonoBehaviour
         {
             inventoryUI.TurnOnSwordImg();
         }
-        else if(equipWeapon && equipWeapon.type == Item.Type.Sword)// 무기를 들고있다면 object 업데이트 하기
+        else if (equipWeapon && equipWeapon.type == Item.Type.Sword)// 무기를 들고있다면 object 업데이트 하기
         {
 
             swordAry[swordNum].SetActive(false);
             swordAry[newSwordNum].SetActive(true);
-            
+
             Item weapon = swordAry[newSwordNum].GetComponent<Item>();
             equipWeapon = weapon;
         }
@@ -144,7 +144,7 @@ public class Player : MonoBehaviour
     private MeshRenderer[] meshes;
 
     [Header("Curr State")]
-    [SerializeField]private Item equipWeapon;
+    [SerializeField] private Item equipWeapon;
     [SerializeField] private GameObject nearObj;//상호작용 가능한 object
     [SerializeField] private int swordNum = 0; //무기 없는상태(0)에서 시작
     [SerializeField] private bool isDead = false;
@@ -196,7 +196,7 @@ public class Player : MonoBehaviour
             weaponDelay = 0;
         }
     }
-    
+
     private void die()
     {
         anim.SetTrigger("doDie");
@@ -222,11 +222,22 @@ public class Player : MonoBehaviour
     // Coroutine ------------------------------------------------------------------------------------
     IEnumerator attacked(Enemy enemy)
     {
-        ChangeHealth(-enemy.attackPower);
+        Debug.Log("attacked()| enemy");
+        ChangeHealth(-enemy.damage);
         changeColor(Color.red);
         yield return new WaitForSeconds(1f);
         changeColor(Color.white);
     }
+
+    IEnumerator attacked(Bullet bullet)
+    {
+        Debug.Log("attacked()| bullet");
+        ChangeHealth(-bullet.damage);
+        changeColor(Color.red);
+        yield return new WaitForSeconds(1f);
+        changeColor(Color.white);
+    }
+
 
     // Unity Inspectors -----------------------------------------------------------------------------
     [Header("Weapons")]
@@ -244,7 +255,7 @@ public class Player : MonoBehaviour
         meshes = GetComponentsInChildren<MeshRenderer>();
 
         inventoryUI = GameManager.Instance.InventoryUI;
-        hudUI =  GameManager.Instance.HudUI;
+        hudUI = GameManager.Instance.HudUI;
 
         /*Initialize HUD UI*/
         hudUI.UpdateCoin(coin);
@@ -295,7 +306,13 @@ public class Player : MonoBehaviour
         else if (other.tag == "Damager")
         {
             Enemy enemy = other.GetComponentInParent<Enemy>();
-            StartCoroutine( attacked(enemy));
+            StartCoroutine(attacked(enemy));
+        }
+        else if (other.tag == "EnemyBullet")
+        {
+            Bullet bullet = other.GetComponent<Bullet>();
+            StartCoroutine(attacked(bullet));
+
         }
     }
 

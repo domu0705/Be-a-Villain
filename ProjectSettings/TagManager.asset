@@ -15,6 +15,7 @@ TagManager:
   - Bullet
   - Damager
   - Weapon
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

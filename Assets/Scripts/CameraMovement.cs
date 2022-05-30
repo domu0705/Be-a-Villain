@@ -6,7 +6,6 @@ public class CameraMovement : MonoBehaviour
 {
     // Outer Properties -----------------------------------------------------------------------------
     public Camera[] camAry;
-    public PlayerMovement playerMovement;
     public Transform realCamera;
     public Vector3 dirNormalized;
     public Vector3 finalDir;
@@ -44,6 +43,9 @@ public class CameraMovement : MonoBehaviour
     // Properties : caching -------------------------------------------------------------------------
 
     // Inner Properties -----------------------------------------------------------------------------
+    private Player player;
+    private GameObject followDest;
+
     [SerializeField] private float finalDistance;//cam 과 player 사이의 거리
     [SerializeField] private float sensitivity = 200f;//감도
     private int curCamNum = 1;
@@ -53,6 +55,7 @@ public class CameraMovement : MonoBehaviour
 
     private float rotX;//mouse input받을 변수
     private float rotY;//mouse input받을 변수
+
     // Inner Properties -----------------------------------------------------------------------------
     GameObject gun;
 
@@ -66,6 +69,8 @@ public class CameraMovement : MonoBehaviour
     // Unity Messages -------------------------------------------------------------------------------
     private void Awake()
     {
+        player = GameManager.Instance.Player;
+        followDest = player.transform.Find("FollowCamPos").gameObject;
         gun = camAry[0].transform.GetChild(0).gameObject;
 
         gun.SetActive(false);
@@ -87,7 +92,7 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        if (playerMovement.canMove)
+        if (player.Movement.canMove)
         {
             //카메라 y축 회전시는 화면 좌우로 이동하기때문에 x와 yinput 반대로,
             rotX += -(Input.GetAxis("Mouse Y")) * sensitivity * Time.deltaTime;//-안곱하면 마우스 위로올릴 때 아래 봄
@@ -104,9 +109,9 @@ public class CameraMovement : MonoBehaviour
     //update()끝난뒤에 실행
     private void LateUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, objectToFollow.position, followSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, followDest.transform.position, followSpeed);
 
-        if (playerMovement.canMove && curCamNum == 1)
+        if (player.Movement.canMove && curCamNum == 1)
         {
             finalDir = transform.TransformPoint(dirNormalized * maxDistance);//TransformPoint:로컬좌표를 글로벌로 변환
 

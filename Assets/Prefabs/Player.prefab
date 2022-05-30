@@ -651,7 +651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   price: 100
-  value: 90
+  damage: 0
   delay: 0
   itemName: "\uC601\uAC81\uC758 \uAC80"
   info: "\uC624\uB79C \uC2DC\uAC04 \uC6A9\uC0AC\uB4E4\uACFC \uAC80\uC744 \uBD80\uB51B\uD788\uBA70
@@ -659,6 +659,8 @@ MonoBehaviour:
     \uC0C1\uB300\uC5D0\uAC8C \uC660\uC9C0 \uBAA8\uB97C \uC704\uC555\uAC10\uC744 \uC900\uB2E4\uB124.
     \uCD5C\uC885 \uBCF4\uC2A4\uB4E4 \uC0AC\uC774\uC758 \uC2A4\uD14C\uB514 \uC140\uB7EC\uB77C\uACE0
     \uB9D0\uD558\uB294\uAC8C \uC88B\uACA0\uAD70."
+  startRot: {x: 0, y: 0, z: 0, w: 0}
+  destRot: {x: 0, y: 0, z: 0, w: 0}
   moveEffect: {fileID: 4928688207397715979}
   bulletPos: {fileID: 0}
 --- !u!65 &4928688207298945422
@@ -854,7 +856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4928688208229444127}
   m_Layer: 0
-  m_Name: FollowCam
+  m_Name: FollowCamPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -972,12 +974,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   price: 35
-  value: 50
+  damage: 0
   delay: 0
   itemName: "\uC911\uAC04 \uBCF4\uC2A4\uC758 \uAC80"
   info: "\uB369\uCE58 \uD070 \uC911\uAC04 \uBCF4\uC2A4\uB4E4\uC774 \uC6A9\uC0AC\uB4E4\uC744
     \uAE30\uC120 \uC81C\uC555\uC744 \uD558\uAE30 \uC88B\uC740 \uAC80\uC774\uB77C\uB124.
     \uAC80\uC774 \uC790\uB124\uB97C \uBD80\uB974\uACE0 \uC788\uAD6C\uB9CC."
+  startRot: {x: 0, y: 0, z: 0, w: 0}
+  destRot: {x: 0, y: 0, z: 0, w: 0}
   moveEffect: {fileID: 4928688206951333135}
   bulletPos: {fileID: 0}
 --- !u!65 &4928688207412934733
@@ -1091,13 +1095,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   price: 10
-  value: 10
+  damage: 0
   delay: 0
   itemName: "\uBCBC\uB2E4\uADC0 \uBCD1\uC0AC\uC758 \uAC80"
   info: "\uC6A9\uC0AC\uB4E4\uC5D0\uAC8C \uBB34\uB825\uD558\uAC8C \uC8FD\uB294 \uBF08\uB2E4\uADC0
     \uBCD1\uC0AC\uC758 \uD544\uC218 \uC544\uC774\uD15C\uC774\uC9C0. \"\uC5F4\uBC88
     \uD718\uB458\uB7EC \uC548\uC8FD\uB294 \uC6A9\uC0AC \uC5C6\uB2E4\" \uB77C\uB294
     \uB9D0\uB3C4 \uC788\uC9C0 \uC54A\uB098."
+  startRot: {x: 0, y: 0, z: 0, w: 0}
+  destRot: {x: 0, y: 0, z: 0, w: 0}
   moveEffect: {fileID: 4928688208558714223}
   bulletPos: {fileID: 0}
 --- !u!65 &4928688207477333153
@@ -1242,13 +1248,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   price: 20
-  value: 35
+  damage: 0
   delay: 0
   itemName: "\uBB34\uC5B8\uAC00\uAC00 \uAE43\uB4E0 \uAC80"
   info: "\uC5F4\uBA85 \uC774\uC0C1\uC758 \uC6A9\uC0AC\uB4E4\uC744 \"\uAC8C\uC784
     \uC624\uBC84\"\uC2DC\uD0A8 \uC545\uB2F9\uB4E4\uC774 \uC0AC\uC6A9\uD558\uB294
     \uAC80\uC774\uC9C0. \uBB34\uC5C7\uC774 \uAE43\uB4E4\uC5C8\uB294\uC9C0\uB294 \uC81C\uBC1C
     \uBB3C\uC5B4\uBCF4\uC9C0 \uB9D0\uC544\uC8FC\uAC8C ."
+  startRot: {x: 0, y: 0, z: 0, w: 0}
+  destRot: {x: 0, y: 0, z: 0, w: 0}
   moveEffect: {fileID: 4928688207819491677}
   bulletPos: {fileID: 0}
 --- !u!65 &4928688207579768623
@@ -1362,13 +1370,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   price: 50
-  value: 70
+  damage: 0
   delay: 0
   itemName: "\uC789\uAC78\uBD88\uC758 \uAC80"
   info: "\uC6A9\uC0AC\uB4E4\uC774 \uB3C4\uB2EC\uD558\uAE30 \uC5B4\uB824\uC6B4 \uB808\uBCA8\uC758
     \uBCF4\uC2A4\uB4E4\uC774 \uC0AC\uC6A9\uD558\uB294 \uAC80\uC774\uC9C0. \uC774\uAE00\uC774\uAE00\uD55C
     \uC5F4\uAE30\uAC00 \uC5EC\uAE30\uAE4C\uC9C0 \uB290\uAEF4\uC9C0\uB294\uAD6C\uB9CC.
     \uD558\uD558"
+  startRot: {x: 0, y: 0, z: 0, w: 0}
+  destRot: {x: 0, y: 0, z: 0, w: 0}
   moveEffect: {fileID: 4928688207628145217}
   bulletPos: {fileID: 0}
 --- !u!65 &4928688207619894600
@@ -2378,12 +2388,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   price: 10
-  value: 20
+  damage: 0
   delay: 0
   itemName: "\uC5B4\uB460 \uBCD1\uC0AC\uC758 \uAC80"
   info: "\uCD08\uBCF4 \uD2F0\uB97C \uBC97\uC740 \uC5B4\uB460 \uBCD1\uC0AC\uB4E4\uC774
     \uC560\uC6A9\uD558\uB294 \uAC80\uC774\uC9C0. \uBB50\uB77C\uACE0 \uC801\uD600\uC788\uB294\uC9C0\uB294
     \uB098\uB3C4 \uBAA8\uB978\uB2E4\uB124. "
+  startRot: {x: 0, y: 0, z: 0, w: 0}
+  destRot: {x: 0, y: 0, z: 0, w: 0}
   moveEffect: {fileID: 4928688208240270091}
   bulletPos: {fileID: 0}
 --- !u!65 &4928688208347349153
@@ -2785,6 +2797,7 @@ MonoBehaviour:
   curSwordPower: 0
   curShieldPower: 0
   hasGun: 0
+  playerMovement: {fileID: 0}
   equipWeapon: {fileID: 0}
   nearObj: {fileID: 0}
   swordNum: 13
@@ -2803,6 +2816,7 @@ MonoBehaviour:
   - {fileID: 4928688207619894607}
   - {fileID: 4928688207298945461}
   gun: {fileID: 0}
+  playerObject: {fileID: 4928688208457364764}
 --- !u!1 &4928688208683746130
 GameObject:
   m_ObjectHideFlags: 0

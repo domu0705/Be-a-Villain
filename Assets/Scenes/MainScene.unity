@@ -68000,7 +68000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1946bda876e9444098e11ff63cb79ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPower: 10
+  damage: 0
   health: 10000
   attackDelay: 1
   targetRadius: 2
@@ -71987,6 +71987,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4928688207400956399, guid: 40c85701760bbf84fbda0cc2bb59936b, type: 3}
+      propertyPath: m_Name
+      value: FollowCamPos
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928688207400956399, guid: 40c85701760bbf84fbda0cc2bb59936b, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
@@ -73742,12 +73746,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e485e7bfe94670f41b0a7af6af5fe9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPower: 5
+  damage: 0
   health: 10000
   attackDelay: 5
   targetRadius: 2
   targetRange: 15
   attackArea: {fileID: 0}
+  bulletNum: 3
+  bulletDelay: 0.2
   gun: {fileID: 744384596}
 --- !u!1 &7072444061932851380
 GameObject:
