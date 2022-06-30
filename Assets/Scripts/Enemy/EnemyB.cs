@@ -25,6 +25,7 @@ public class EnemyB : Enemy
     {
 		isChasing = false;
 		isAttacking = true;
+		anim.SetBool("isWalking", false);
 		anim.SetTrigger("doAttack1");
 		yield return new WaitForSeconds(0.4f);
 
@@ -39,11 +40,12 @@ public class EnemyB : Enemy
 		{
 			yield return new WaitForEndOfFrame();
 		}
-		//attackArea.SetActive(false);
+
 		isChasing = true;
 		yield return new WaitForSeconds(attackDelay);
 
 		isAttacking = false;
+		anim.SetBool("isWalking", true);
 	}
 
 

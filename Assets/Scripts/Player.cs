@@ -129,7 +129,6 @@ public class Player : MonoBehaviour
     public Action<Player, Item> OnAttack;
     public Action<int> OnCamChange;
 
-
     // Fields : caching -----------------------------------------------------------------------------
     private Animator anim;
     private Rigidbody rigid;

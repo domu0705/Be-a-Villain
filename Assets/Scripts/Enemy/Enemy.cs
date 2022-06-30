@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
     // Definitions ----------------------------------------------------------------------------------
     // Outer Properties -----------------------------------------------------------------------------
@@ -44,16 +44,15 @@ public class Enemy : MonoBehaviour
             health -= damage;
         }
     }
-
     private void chase()
     {
         if (isDead || isAttacking) return;
 
-        Debug.Log("chase");
         RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, targetRadius, transform.forward, targetRange, LayerMask.GetMask("Player"));
         Debug.DrawRay(transform.position, transform.forward * targetRange, Color.green);//이작위치,쏘는방향*ray길이, ray색
         if (rayHits.Length > 0)
         {
+            anim.SetBool("isWalking", false);
             StartCoroutine(attack());
         }
     }
@@ -81,10 +80,7 @@ public class Enemy : MonoBehaviour
 
     // Event Handlers -------------------------------------------------------------------------------
     // Overrides ------------------------------------------------------------------------------------
-    protected virtual IEnumerator attack()
-    {
-        yield return new WaitForEndOfFrame();
-    }
+    protected abstract IEnumerator attack();
 
 
     // Unity Inspectors -----------------------------------------------------------------------------

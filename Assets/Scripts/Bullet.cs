@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
 {
 	// Outer Properties -----------------------------------------------------------------------------
 	public int damage;
+	public enum Owner{ Player, Enemy};
 
 	// Outer Functions ------------------------------------------------------------------------------
 	public void ShootBulletFrom(Vector3 startPos,Transform direction)
@@ -32,6 +33,7 @@ public class Bullet : MonoBehaviour
 
 	// Inner Properties -----------------------------------------------------------------------------
 	[SerializeField] private int bulletSpeed = 200;
+	[SerializeField] private Owner owner;
 
 	// Inner Functions ------------------------------------------------------------------------------
 	private GameObject bulletDestination()
@@ -61,11 +63,13 @@ public class Bullet : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)//총알이 벽과 충돌시 다시 오브젝트 풀로 이동
 	{
-		if (other.gameObject.tag == "Boundary")
+		if ( owner == Owner.Enemy && other.gameObject.tag != "Enemy")
 		{
 			gameObject.SetActive(false);
 		}
-
-		gameObject.SetActive(false);
+        else if(owner == Owner.Player)
+		{
+			gameObject.SetActive(false);
+		}
 	}
 }

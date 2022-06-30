@@ -63,7 +63,7 @@ public class TalkData : Singleton<TalkData>
 
 
         });
-        talkData.Add(2, new Dictionary<int, string[]> {
+        talkData.Add(2, new Dictionary<int, string[]> {//퀘스트 2
             {0, new string[] { "초록: 퀘스트 2번 대사." } },
             {1, new string[] { "토끼: 퀘스트 2번 대사" } },
             {2, new string[] { "안녕하십니까. 시작의 땅 중간 보스자리로 새로 오신 분이군요.", "좋습니다. 건투를 빕니다." } },

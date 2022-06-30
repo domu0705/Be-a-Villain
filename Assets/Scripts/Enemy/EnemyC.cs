@@ -2,8 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class EnemyA : Enemy
+public class EnemyC : Enemy
 {
 	// ----------------------------------------------------------------------------------------------
 
@@ -24,6 +23,7 @@ public class EnemyA : Enemy
 	// Overrides ------------------------------------------------------------------------------------
 	protected override IEnumerator attack()
 	{
+		Debug.Log("attack C ()");
 		isChasing = false;
 		isAttacking = true;
 		anim.SetBool("isWalking", false);
@@ -31,16 +31,16 @@ public class EnemyA : Enemy
 		yield return new WaitForSeconds(0.4f);
 
 		attackArea.SetActive(true);
-		while (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack1") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)//ANIM ëë‚ ë•Œ ê¹Œì§€ ê¸°ë‹¤ë¦¬ê¸°
+		while (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack1") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)//ANIM ³¡³¯¶§ ±îÁö ±â´Ù¸®±â
 		{
 			yield return new WaitForEndOfFrame();
 		}
 		attackArea.SetActive(false);
 		yield return new WaitForSeconds(attackDelay);
 
+		anim.SetBool("isWalking", true);
 		isChasing = true;
 		isAttacking = false;
-		anim.SetBool("isWalking", true);
 	}
 
 
